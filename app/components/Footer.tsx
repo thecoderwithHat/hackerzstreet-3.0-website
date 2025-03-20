@@ -5,6 +5,7 @@ import CS_Logo from "@/public/ieee_cs.svg"
 import { CiGlobe } from "react-icons/ci";
 import {Poppins} from "next/font/google";
 
+
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   variable: "--font-poppins",
@@ -12,6 +13,7 @@ const poppins = Poppins({
 });
 
 const Footer = () => {
+  
   return (
     <footer
       className="bg-gradient-to-t from-[#FFA300]  to-black text-white py-8 px-10 "
