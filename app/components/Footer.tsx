@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="md:grid flex flex-wrap md:grid-cols-2 items-center w-full gap-8 lg:gap-0">
         <div className="flex flex-wrap items-center gap-8 w-full justify-between px-8 ">
           <Image src={HS_Footer} alt={"HackerzStreet 3.0"} />
-          <span className="text-8xl hidden md:block ">/</span>
+          <span className="text-8xl hidden lg:block ">/</span>
           <Image
             src={CS_Logo}
             alt="IEEE Computer Society MUJ"
@@ -39,7 +39,7 @@ const Footer = () => {
               <p>Vice-Chairperson</p>
             </div>
           </div>
-          <div className={`text-right flex flex-col items-start pl-16 py-6 ${poppins.className}`}>
+          <div className={`text-right flex flex-col  lg:items-start items-center justify-center p-16 py-6 ${poppins.className} `}>
             <div className="flex items-center space-x-2">
               <CiGlobe />
               <a
@@ -52,7 +52,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className={`flex space-x-4 my-4 text-2xl`}>
+            <div className={`flex space-x-4 my-4 text-2xl items-center justify-center`}>
               <Image
                 src="/instagram.svg"
                 alt="Instagram"
@@ -83,10 +83,7 @@ const Footer = () => {
               />
             </div>
 
-            <p className="pt-4 font-bold">
-              Made with <span className="text-yellow-400">&#x1F49B;</span> by IEEE
-              CS MUJ
-            </p>
+           
           </div>
 
           <p className="text-sm text-center">

@@ -31,7 +31,7 @@ const About = () => {
       id="about"
       className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
     >
-      <h1 className="text-7xl font-bold text-center tracking-tighter mb-4">
+      <h1 className="text-7xl font-bold text-center tracking-tighter mb-4 ">
         ABOUT US
       </h1>
 
@@ -64,12 +64,12 @@ const About = () => {
           <h3
   className={`text-9xl font-extrabold tracking-tighter mb-2 ${
     isGolden ? "glow-yellow" : "glow-white"
-  }`}
+  } flex  items-center justify-center w-full md:block `}
 >
   CS
 </h3>
 
-            <div className="w-20 border-t-2 border-yellow-500"></div>
+            <div className="w-20 border-t-2 border-yellow-500 hidden md:block"></div>
           </div>
 
           <p className="text-gray-400 text-sm leading-relaxed mt-4">
