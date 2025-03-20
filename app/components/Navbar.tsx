@@ -58,7 +58,7 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="hidden md:flex items-center space-x-6 bg-transparent px-2 py-2 rounded-full border border-white">
+      <div className="hidden lg:flex items-center space-x-6 bg-transparent px-2 py-2 rounded-full border border-white">
         {navLinks.map(({ name, id }) => (
           <div
             key={name}
