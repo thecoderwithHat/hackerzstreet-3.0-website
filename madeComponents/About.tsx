@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import "../app/about.css";
 
 const About = () => {
   const logoRef = useRef(null);
@@ -60,15 +61,13 @@ const About = () => {
 
         <div>
           <div className="flex flex-col items-start">
-            <h3
-              className={`text-9xl font-extrabold tracking-tighter mb-2 ${
-                isGolden
-                  ? "text-yellow-500 shadow-[0_0_40px_rgba(255,215,0,0.8)]"
-                  : "text-white shadow-[0_0_20px_rgba(255,255,255,0.8)]"
-              }`}
-            >
-              CS
-            </h3>
+          <h3
+  className={`text-9xl font-extrabold tracking-tighter mb-2 ${
+    isGolden ? "glow-yellow" : "glow-white"
+  }`}
+>
+  CS
+</h3>
 
             <div className="w-20 border-t-2 border-yellow-500"></div>
           </div>

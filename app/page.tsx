@@ -1,13 +1,12 @@
-
 import About from '@/madeComponents/About'
-import Footer from '@/madeComponents/Footer'
 import React from 'react'
+import Footer from './components/Footer'
 
 const Home = () => {
   return (
     <div className="w-full h-screen">
       <About />
-      <Footer />
+      <Footer/>
     </div>
   )
 }
