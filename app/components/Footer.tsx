@@ -1,57 +1,58 @@
 "use client";
 import Image from "next/image";
+import HS_Footer from "@/public/hs_footer.svg";
+import CS_Logo from "@/public/ieee_cs.svg"
 import { CiGlobe } from "react-icons/ci";
+import {Poppins} from "next/font/google";
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500"],
+  variable: "--font-poppins",
+  subsets: ["latin"],
+});
 
 const Footer = () => {
   return (
     <footer
       className="bg-gradient-to-t from-[#FFA300]  to-black text-white py-8 px-10 "
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-       
-        <div className="flex items-center gap-4 text-left w-full">
-          <h1 className="text-5xl font-bold tracking-tight">
-            HACKERZSTREET <span className="text-2xl">3.0</span>
-          </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full">
+        <div className="flex items-center gap-8 w-full justify-between px-8">
+          <Image src={HS_Footer} alt={"HackerzStreet 3.0"} />
           <span className="text-8xl">/</span>
-          <div>
-            <Image
-              src="/ieee.svg"
-              alt="IEEE Computer Society MUJ"
-              width={250}
-              height={70}
-            />
-          </div>
+          <Image
+            src={CS_Logo}
+            alt="IEEE Computer Society MUJ"
+          />
         </div>
-
-      
         <div className="grid grid-cols-2 w-full">
-       
-          <div className="text-center border-r border-white/50 px-8 border-l">
-            <p className="font-bold text-lg">Rishi Joshi</p>
-            <p>+91 95699 13103</p>
-            <p>Chairperson</p>
-            <hr className="my-2 border-white/50" />
-            <p className="font-bold text-lg">Pranav Bhardwaj</p>
-            <p>+91 99995 58266</p>
-            <p>Vice-Chairperson</p>
+          <div className={`text-center border-r-2 border-white 
+          px-8 border-l-2 flex flex-col gap-4 ${poppins.className} py-3`}>
+            <div>
+              <p className="font-bold text-2xl">Rishi Joshi</p>
+              <p>+91 95699 13103</p>
+              <p>Chairperson</p>
+            </div>
+            <div>
+              <p className="font-bold text-2xl">Pranav Bhardwaj</p>
+              <p>+91 99995 58266</p>
+              <p>Vice-Chairperson</p>
+            </div>
           </div>
-
-         
-          <div className="text-right flex flex-col items-center md:items-end px-8">
-            <div className="flex items-center space-x-2 text-xl">
+          <div className={`text-right flex flex-col items-start pl-16 py-6 ${poppins.className}`}>
+            <div className="flex items-center space-x-2">
               <CiGlobe />
               <a
                 href="https://cs.ieeemuj.com/"
                 className="underline"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
               >
                 https://cs.ieeemuj.com/
               </a>
             </div>
 
-            <div className="flex space-x-4 my-4 text-2xl">
+            <div className={`flex space-x-4 my-4 text-2xl`}>
               <Image
                 src="/instagram.svg"
                 alt="Instagram"
@@ -82,7 +83,7 @@ const Footer = () => {
               />
             </div>
 
-            <p className="text-sm">
+            <p className="pt-4 font-bold">
               Made with <span className="text-yellow-400">&#x1F49B;</span> by IEEE
               CS MUJ
             </p>

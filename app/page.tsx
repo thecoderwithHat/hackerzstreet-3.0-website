@@ -1,4 +1,3 @@
-import Navbar from '@/madeComponents/Navbar'
 import React from 'react'
 
 const Home = () => {

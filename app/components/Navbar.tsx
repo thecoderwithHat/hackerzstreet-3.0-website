@@ -77,8 +77,9 @@ const Navbar = () => {
         className="relative border border-white text-white px-6 py-2 rounded-full overflow-hidden cursor-pointer"
       >
         <span ref={registerTextRef} className="relative z-10 font-bold tracking-tighter">REGISTER</span>
-        <div className="hover-text absolute inset-0 bg-[#FFA300] text-white text-[0.7rem] flex items-center justify-center font-bold z-0 ">
-          YES ! CLICK HERE
+        <div className="hover-text absolute inset-0 bg-[#FFA300] text-white
+        flex items-center justify-center font-bold z-0 tracking-tighter">
+          REGISTER
         </div>
       </div>
     </nav>
