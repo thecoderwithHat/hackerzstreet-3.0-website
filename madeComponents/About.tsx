@@ -1,14 +1,35 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 
 const About = () => {
+  const logoRef = useRef(null);
+  const [isGolden, setIsGolden] = useState(false);
+
+  useEffect(() => {
+    const timeline = gsap.timeline({ repeat: -1 });
+
+    timeline.to(logoRef.current, {
+      rotateY: 180,
+      duration: 2,
+      ease: "linear",
+      onComplete: () => setIsGolden(true),
+    });
+
+    timeline.to(logoRef.current, {
+      rotateY: 360,
+      duration: 2,
+      ease: "linear",
+      onComplete: () => setIsGolden(false),
+    });
+  }, []);
+
   return (
     <section
       id="about"
-      className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-8 py-16"
+      className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
     >
-      {/* Heading Moved Outside the Grid */}
       <h1 className="text-7xl font-bold text-center tracking-tighter mb-4">
         ABOUT US
       </h1>
@@ -18,45 +39,51 @@ const About = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
-        <div className="flex items-center justify-center">
-          <div className="rounded-full p-16">
+        <div className="flex items-center justify-center md:justify-start">
+          <div
+            ref={logoRef}
+            className="rounded-full flex"
+            style={{
+              transformStyle: "preserve-3d",
+              backfaceVisibility: "hidden",
+            }}
+          >
             <Image
-              src="/ieeeLogo.svg"
+              src={isGolden ? "/ieeeLogo.svg" : "/csWhite.svg"}
               alt="IEEE CS Logo"
-              width={600}
-              height={600}
-              className="rounded-lg object-cover p-2"
+              width={400}
+              height={400}
+              className="rounded-full object-cover"
             />
           </div>
         </div>
 
         <div>
           <div className="flex flex-col items-start">
-            {/* SVG as Image */}
-            <Image
-              src="/cs.svg"
-              alt="CS Logo"
-              width={400}  // Adjust size as needed
-              height={200} // Adjust size as needed
-              className="mb-2"
-            />
+            <h3
+              className={`text-9xl font-extrabold tracking-tighter mb-2 ${
+                isGolden
+                  ? "text-yellow-500 shadow-[0_0_40px_rgba(255,215,0,0.8)]"
+                  : "text-white shadow-[0_0_20px_rgba(255,255,255,0.8)]"
+              }`}
+            >
+              CS
+            </h3>
 
-            {/* Underline */}
-            {/* <div className="w-20 border-t-2 border-yellow-500"></div> */}
+            <div className="w-20 border-t-2 border-yellow-500"></div>
           </div>
-          
+
           <p className="text-gray-400 text-sm leading-relaxed mt-4">
             Serving computing at its best with inclusion and diversity is the
             prime motto of the IEEE Computer Society. This society was created
             keeping in mind IEEE’s continued commitment to providing options at
             best. The IEEE Computer Society is driven by the central goals of
             equity, diversity, inclusion, and yearn to serve computing at its
-            perfection. With an intent to expand the IEEE’s reach and
-            learnings, this society was started a year back in early 2020.
-            Since then, society has tried every possible course of action by
-            conducting diverse events such as webinars, competitions,
-            workshops, and mentorship programs to set a goal for the young
-            achievers.
+            perfection. With an intent to expand the IEEE’s reach and learnings,
+            this society was started a year back in early 2020. Since then,
+            society has tried every possible course of action by conducting
+            diverse events such as webinars, competitions, workshops, and
+            mentorship programs to set a goal for the young achievers.
             <br />
             <br />
             The members of IEEE CS have been skilled and earned minimal
