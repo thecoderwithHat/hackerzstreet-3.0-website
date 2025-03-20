@@ -1,21 +1,26 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Schedules", path: "/schedules" },
-  { name: "Tracks", path: "/tracks" },
-  { name: "About Us", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", id: "home" },
+  { name: "Schedules", id: "schedules" },
+  { name: "Tracks", id: "tracks" },
+  { name: "About Us", id: "about" },
+  { name: "Contact", id: "contact" },
 ];
 
 const Navbar = () => {
-  const router = useRouter();
   const registerRef = useRef<HTMLDivElement | null>(null);
   const registerTextRef = useRef<HTMLSpanElement | null>(null);
+
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     if (!registerRef.current || !registerTextRef.current) return;
@@ -43,7 +48,6 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between bg-transparent px-8 py-4 rounded-3xl w-full shadow-md gap-6">
-      
       <div className="flex items-center">
         <Image
           src="https://s3-alpha-sig.figma.com/img/e5ec/a60b/3e05c1069495ebb9d0d74be8cf13e5d8?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ERuxOeJygxabr6J7~xeIJv09TIP9wLMQ9DwWykPRpcbfMW0AVg79D4w7qTgpn86q5ML50asOiB1NwLNf-HwgsOEpt~f51PNuuqlrE5~kti~g-vD9KXRibJttvkGZuPRY6XQaWNMv1i-16rjktiVsrUx2RYdQmvH7RuCCeimz8-ZioDa3y3~M~NxBOyLiPYopucuJyLP5gBxVZuvzZJScXpGim8DrsOAqwC03umrtET84azrZzI-lHmvyHJiwyvI7fOUuxOpZ8hpvK9vAIgIo4f5GU92RE3ZoHNyMDwCf7Q2KPPE-8teyHB86HazvYvhpKOSZoJD6lpKmDd9vo9hHFg__"
@@ -54,12 +58,11 @@ const Navbar = () => {
         />
       </div>
 
-     
-      <div className="hidden md:flex items-center space-x-6 bg-transparent px-2 py-2 rounded-full border border-white ">
-        {navLinks.map(({ name, path }) => (
+      <div className="hidden md:flex items-center space-x-6 bg-transparent px-2 py-2 rounded-full border border-white">
+        {navLinks.map(({ name, id }) => (
           <div
             key={name}
-            onClick={() => router.push(path)}
+            onClick={() => handleScroll(id)}
             className={`cursor-pointer px-4 py-2 rounded-full font-bold ${
               name === "Home"
                 ? "bg-gray-600 text-white"
@@ -71,7 +74,6 @@ const Navbar = () => {
         ))}
       </div>
 
-      
       <div
         ref={registerRef}
         className="relative border border-white text-white px-6 py-2 rounded-full overflow-hidden cursor-pointer"

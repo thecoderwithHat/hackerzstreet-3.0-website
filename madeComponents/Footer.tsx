@@ -4,41 +4,39 @@ import { CiGlobe } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer
-      className="bg-gradient-to-t from-[#FFA300]  to-black text-white py-8 px-10 "
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-       
-        <div className="flex items-center gap-4 text-left w-full">
-          <h1 className="text-5xl font-bold tracking-tight">
+    <footer className="bg-gradient-to-t from-[#FFA300] to-black text-white py-8 px-10 ">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+
+        {/* Left Section */}
+        <div className="flex flex-col md:flex-row items-center gap-4 w-full">
+          <h1 className="text-5xl font-bold tracking-tight text-center md:text-left">
             HACKERZSTREET <span className="text-2xl">3.0</span>
           </h1>
-          <span className="text-8xl">/</span>
-          <div>
-            <Image
-              src="/ieee.svg"
-              alt="IEEE Computer Society MUJ"
-              width={250}
-              height={70}
-            />
-          </div>
+          <span className="hidden md:block text-8xl">/</span>
+          <Image
+            src="/ieee.svg"
+            alt="IEEE Computer Society MUJ"
+            width={250}
+            height={70}
+          />
         </div>
 
-      
-        <div className="grid grid-cols-2 w-full">
-       
-          <div className="text-center border-r border-white/50 px-8 border-l">
+        {/* Right Section */}
+        <div className="flex flex-col md:flex-row w-full gap-8 items-center justify-center">
+
+          {/* Contact Details - Centered */}
+          <div className="flex-1 flex flex-col items-center text-center border-white/50 border-l md:border-r px-8 space-y-2">
             <p className="font-bold text-lg">Rishi Joshi</p>
             <p>+91 95699 13103</p>
             <p>Chairperson</p>
-            <hr className="my-2 border-white/50" />
+            <hr className="my-2 border-white/50 w-1/2" />
             <p className="font-bold text-lg">Pranav Bhardwaj</p>
             <p>+91 99995 58266</p>
             <p>Vice-Chairperson</p>
           </div>
 
-         
-          <div className="text-right flex flex-col items-center md:items-end px-8">
+          {/* Social Links & Website */}
+          <div className="flex-1 flex flex-col items-center md:items-end px-8 space-y-4">
             <div className="flex items-center space-x-2 text-xl">
               <CiGlobe />
               <a
@@ -55,36 +53,35 @@ const Footer = () => {
               <Image
                 src="/instagram.svg"
                 alt="Instagram"
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 className="cursor-pointer hover:opacity-75"
               />
               <Image
                 src="/linkedin.svg"
                 alt="LinkedIn"
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 className="cursor-pointer hover:opacity-75"
               />
               <Image
                 src="/medium.svg"
                 alt="Medium"
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 className="cursor-pointer hover:opacity-75"
               />
               <Image
                 src="/x.svg"
                 alt="X (formerly Twitter)"
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 className="cursor-pointer hover:opacity-75"
               />
             </div>
 
-            <p className="text-sm">
-              Made with <span className="text-yellow-400">&#x1F49B;</span> by IEEE
-              CS MUJ
+            <p className="text-sm text-center md:text-right">
+              Made with <span className="text-yellow-400">&#x1F49B;</span> by IEEE CS MUJ
             </p>
           </div>
         </div>
