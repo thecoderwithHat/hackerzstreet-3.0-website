@@ -16,18 +16,18 @@ const Footer = () => {
     <footer
       className="bg-gradient-to-t from-[#FFA300]  to-black text-white py-8 px-10 "
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center w-full">
-        <div className="flex items-center gap-8 w-full justify-between px-8">
+      <div className="md:grid flex flex-wrap md:grid-cols-2 items-center w-full gap-8 lg:gap-0">
+        <div className="flex flex-wrap items-center gap-8 w-full justify-between px-8 ">
           <Image src={HS_Footer} alt={"HackerzStreet 3.0"} />
-          <span className="text-8xl">/</span>
+          <span className="text-8xl hidden md:block ">/</span>
           <Image
             src={CS_Logo}
             alt="IEEE Computer Society MUJ"
           />
         </div>
-        <div className="grid grid-cols-2 w-full">
-          <div className={`text-center border-r-2 border-white 
-          px-8 border-l-2 flex flex-col gap-4 ${poppins.className} py-3`}>
+        <div className="grid grid-cols-1 md:grid-cols-2  w-full">
+          <div className={`text-center lg:border-r-2 border-white 
+          px-8 lg:border-l-2 flex flex-col gap-4 ${poppins.className} py-3`}>
             <div>
               <p className="font-bold text-2xl">Rishi Joshi</p>
               <p>+91 95699 13103</p>
