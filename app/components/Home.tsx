@@ -110,9 +110,13 @@ function HomePage() {
               <br></br>
               <span className={"text-white/50 text-sm font-light"}>Scroll to find out!</span>
             </div>
-            <div className="absolute -right-10 text-4xl w-16 h-16 rounded-full bg-ieeeyellow flex justify-center pt-2">
-              &#x2193;
-            </div>
+            <Image
+              src={"/down.svg"}
+              alt={"down arrow"}
+              width={70}
+              height={70}
+              className={"absolute -right-10"}
+            />
           </div>
         </div>
 

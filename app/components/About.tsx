@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import "@/app/about.css";
+import "@/app/styles/about.css";
 import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
@@ -20,14 +20,14 @@ const About = () => {
 
     timeline.to(logoRef.current, {
       rotateY: 180,
-      duration: 2,
+      duration: 1,
       ease: "linear",
       onComplete: () => setIsGolden(true),
     });
 
     timeline.to(logoRef.current, {
       rotateY: 360,
-      duration: 2,
+      duration: 1,
       ease: "linear",
       onComplete: () => setIsGolden(false),
     });
