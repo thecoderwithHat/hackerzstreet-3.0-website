@@ -3,12 +3,12 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "@/app/about.css";
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500"],
+  variable: "--font-poppins",
+  subsets: ["latin"],
 });
 
 const About = () => {
@@ -38,11 +38,11 @@ const About = () => {
       id="about"
       className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
     >
-      <h1 className={`text-7xl font-bold text-center tracking-tighter mb-4 ${inter.className}`}>
+      <h1 className={`text-7xl font-bold text-center tracking-tighter font-yapari pt-20`}>
         ABOUT US
       </h1>
 
-      <h2 className={`text-yellow-500 text-lg font-bold text-center w-full mb-12 ${inter.className} font-extrabold`}>
+      <h2 className={`text-ieeeyellow text-lg font-bold text-center w-full mb-12 ${poppins.className} font-extrabold`}>
         IEEE COMPUTER SOCIETY MUJ
       </h2>
 
@@ -71,15 +71,15 @@ const About = () => {
             <h3
               className={`text-9xl font-extrabold tracking-tighter mb-2 ${
                 isGolden ? "glow-yellow" : "glow-white"
-              } flex items-center justify-center w-full md:block ${inter.className}`}
+              } flex items-center justify-start w-full font-yapari`}
             >
               CS
             </h3>
 
-            <div className="w-20 border-t-2 border-yellow-500 hidden md:block"></div>
+            <div className="w-full border-t-2 border-ieeeyellow"></div>
           </div>
 
-          <p className="text-gray-400 text-sm leading-relaxed mt-4">
+          <p className={`text-white text-sm leading-relaxed mt-4 ${poppins.className}`}>
           Serving computing at its best with inclusion and diversity is the
             prime motto of the IEEE Computer Society. This society was created
             keeping in mind IEEE’s continued commitment to providing options at

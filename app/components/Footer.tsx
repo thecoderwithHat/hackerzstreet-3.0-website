@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import HS_Footer from "@/public/hs_footer.svg";
 import CS_Logo from "@/public/ieee_cs.svg"
