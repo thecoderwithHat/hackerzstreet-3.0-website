@@ -1,0 +1,10 @@
+.bg {
+  background-image: url("../../public/backgrounds/hero-flipped.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.on-hover-animation {
+    
+}

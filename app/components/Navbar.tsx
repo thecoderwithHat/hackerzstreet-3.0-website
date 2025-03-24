@@ -47,7 +47,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between bg-transparent px-8 py-4 rounded-3xl w-full shadow-md gap-6">
+    <nav className="flex items-center justify-between bg-transparent px-8 py-4 rounded-3xl w-full shadow-md gap-6 z-[10] relative">
+
       <div className="flex items-center">
         <Image
           src="https://s3-alpha-sig.figma.com/img/e5ec/a60b/3e05c1069495ebb9d0d74be8cf13e5d8?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ERuxOeJygxabr6J7~xeIJv09TIP9wLMQ9DwWykPRpcbfMW0AVg79D4w7qTgpn86q5ML50asOiB1NwLNf-HwgsOEpt~f51PNuuqlrE5~kti~g-vD9KXRibJttvkGZuPRY6XQaWNMv1i-16rjktiVsrUx2RYdQmvH7RuCCeimz8-ZioDa3y3~M~NxBOyLiPYopucuJyLP5gBxVZuvzZJScXpGim8DrsOAqwC03umrtET84azrZzI-lHmvyHJiwyvI7fOUuxOpZ8hpvK9vAIgIo4f5GU92RE3ZoHNyMDwCf7Q2KPPE-8teyHB86HazvYvhpKOSZoJD6lpKmDd9vo9hHFg__"
@@ -55,6 +56,7 @@ const Navbar = () => {
           width={200}
           height={80}
           className="rounded-lg p-2"
+          draggable="false"
         />
       </div>
 
@@ -76,12 +78,12 @@ const Navbar = () => {
 
       <div
         ref={registerRef}
-        className="relative border border-white text-white px-6 py-2 rounded-full overflow-hidden cursor-pointer"
+        className="relative border border-white text-white px-12 py-2 rounded-full overflow-hidden cursor-pointer"
       >
         <span ref={registerTextRef} className="relative z-10 font-bold tracking-tighter">REGISTER</span>
         <div className="hover-text absolute inset-0 bg-[#FFA300] text-white
-        flex items-center justify-center font-bold z-0 tracking-tighter">
-          REGISTER
+        flex items-center text-[15px] justify-center font-bold z-0 tracking-tighter">
+          YES! CLICK HERE
         </div>
       </div>
     </nav>
