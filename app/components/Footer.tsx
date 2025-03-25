@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10">
       <div className="flex w-full flex-wrap items-center gap-8 md:grid md:grid-cols-2 lg:gap-0">
-        <div className="flex w-full flex-wrap items-center justify-between md:gap-8 md:px-8">
+        <div className="flex w-full flex-wrap items-center justify-evenly md:gap-8 md:px-8">
           <Image
             src={HS_Footer}
             alt={"HackerzStreet 3.0"}
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="flex w-full flex-row justify-evenly md:grid md:grid-cols-2">
           <div
-            className={`flex flex-col gap-4 border-r-1 border-white pr-4 text-center md:border-r-2 md:px-8 lg:border-l-2 ${poppins.className} justify-evenly py-3`}
+            className={`flex flex-col gap-4 border-white pr-4 text-center md:border-r-2 md:px-8 lg:border-l-2 ${poppins.className} justify-evenly py-3`}
           >
             <div>
               <p className="text-xs font-bold md:text-2xl">Rishi Joshi</p>
@@ -44,6 +44,11 @@ const Footer = () => {
               <p className={"text-tiny md:text-base"}>Vice-Chairperson</p>
             </div>
           </div>
+          <div
+            className={
+              "mt-4 block h-[7rem] w-[0.25rem] border-r-[2px] border-white md:hidden"
+            }
+          ></div>
           <div
             className={`flex flex-col items-center justify-center py-6 pl-4 text-right md:p-16 lg:items-start ${poppins.className} `}
           >
