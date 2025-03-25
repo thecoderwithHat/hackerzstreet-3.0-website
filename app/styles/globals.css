@@ -2,29 +2,30 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'YapariTrial';
-  src: url('/fonts/YapariTrial-Regular.ttf') format('truetype');
+  font-family: "YapariTrial";
+  src: url("/fonts/YapariTrial-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'YapariTrial';
-  src: url('/fonts/YapariTrial-Bold.ttf') format('truetype');
+  font-family: "YapariTrial";
+  src: url("/fonts/YapariTrial-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 :root {
-  --background: #0C0C0C;
+  --background: #0c0c0c;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ieeeyellow: #FAA41A;
-  --font-yapari: 'YapariTrial', sans-serif;
+  --color-ieeeyellow: #faa41a;
+  --font-yapari: "YapariTrial", sans-serif;
+  --text-tiny: 0.625rem;
 }
 
 @media (prefers-color-scheme: dark) {

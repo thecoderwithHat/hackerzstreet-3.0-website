@@ -1,14 +1,14 @@
-import About from '@/app/components/About'
-import React from 'react'
-import HomePage from '@/app/components/Home'
+import About from "@/app/components/About";
+import React from "react";
+import HomePage from "@/app/components/Home";
 
 const Home = () => {
   return (
     <div className="w-full">
-      <HomePage/>
+      <HomePage />
       <About />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
