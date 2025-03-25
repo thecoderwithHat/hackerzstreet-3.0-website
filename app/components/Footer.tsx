@@ -8,6 +8,7 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   variable: "--font-poppins",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const Footer = () => {
