@@ -2,7 +2,6 @@ import Image from "next/image";
 import RightSection from "./RightHome";
 import { Poppins } from "next/font/google";
 import HeroBackground from "@/public/backgrounds/hero.svg";
-import HamburgerIcon from "@/public/hamburger.svg";
 import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 // import RadialPattern from "@/public/backgrounds/radial.svg";
@@ -43,10 +42,10 @@ function HomePage() {
         <h1 className="font-yapari hidden text-8xl font-bold md:block">
           HACKERZSTREET
         </h1>
-        <h1 className="font-yapari block text-5xl font-bold md:hidden">
+        <h1 className="font-yapari block text-4xl font-bold md:hidden">
           HACKERZ
         </h1>
-        <h1 className="font-yapari block text-5xl font-bold md:hidden">
+        <h1 className="font-yapari block text-4xl font-bold md:hidden">
           STREET
         </h1>
         <p
@@ -74,10 +73,10 @@ function HomePage() {
           </p>
 
           <div className="relative mt-2 flex cursor-pointer items-center space-x-2 bg-transparent md:mt-10">
-            <div className="w-44 rounded-full border-[1px] border-white/50 px-3 py-2 text-xs font-bold md:w-auto md:px-10 md:py-3 md:text-base">
+            <div className="w-40 rounded-full border-[1px] border-white/50 px-3 py-2 text-xs font-bold md:w-72 md:px-10 md:py-3 md:text-base">
               Want to know more?
               <br></br>
-              <span className={"text-tiny text-sm font-light text-white/50"}>
+              <span className={"text-tiny font-light text-white/50 md:text-sm"}>
                 Scroll to find out!
               </span>
             </div>

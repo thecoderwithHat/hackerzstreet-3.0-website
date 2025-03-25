@@ -19,10 +19,17 @@ const About = () => {
     const timeline = gsap.timeline({ repeat: -1 });
 
     timeline.to(logoRef.current, {
-      rotateY: 180,
+      rotateY: 90,
       duration: 1,
       ease: "linear",
       onComplete: () => setIsGolden(true),
+    });
+
+    timeline.to(logoRef.current, {
+      rotateY: 270,
+      duration: 2,
+      ease: "linear",
+      onComplete: () => setIsGolden(false),
     });
 
     timeline.to(logoRef.current, {
@@ -39,13 +46,13 @@ const About = () => {
       className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-8 py-16 text-white"
     >
       <h1
-        className={`font-yapari pt-20 text-center text-7xl font-bold tracking-tighter`}
+        className={`font-yapari pt-20 text-center text-4xl font-bold tracking-tighter md:text-7xl`}
       >
         ABOUT US
       </h1>
 
       <h2
-        className={`text-ieeeyellow mb-12 w-full text-center text-lg font-bold ${poppins.className} font-extrabold`}
+        className={`text-ieeeyellow mb-12 w-full text-center text-sm font-bold md:text-lg ${poppins.className} font-extrabold`}
       >
         IEEE COMPUTER SOCIETY MUJ
       </h2>
@@ -57,7 +64,7 @@ const About = () => {
             className="flex rounded-full"
             style={{
               transformStyle: "preserve-3d",
-              backfaceVisibility: "hidden",
+              // backfaceVisibility: "hidden",
             }}
           >
             <Image
@@ -65,7 +72,7 @@ const About = () => {
               alt="IEEE CS Logo"
               width={400}
               height={400}
-              className="rounded-full object-cover"
+              className={"rounded-full object-cover"}
             />
           </div>
         </div>
@@ -73,13 +80,12 @@ const About = () => {
         <div>
           <div className="flex flex-col items-start">
             <h3
-              className={`mb-2 text-9xl font-extrabold tracking-tighter ${
+              className={`mb-2 text-7xl font-extrabold tracking-tighter md:text-9xl ${
                 isGolden ? "glow-yellow" : "glow-white"
               } font-yapari flex w-full items-center justify-start`}
             >
               CS
             </h3>
-
             <div className="border-ieeeyellow w-full border-t-2"></div>
           </div>
 

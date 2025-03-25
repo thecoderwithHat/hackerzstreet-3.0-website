@@ -12,13 +12,13 @@ const poppins = Poppins({
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-[#FFA300] to-black px-10 py-8 text-white">
+    <footer className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10">
       <div className="flex w-full flex-wrap items-center gap-8 md:grid md:grid-cols-2 lg:gap-0">
         <div className="flex w-full flex-wrap items-center justify-between md:gap-8 md:px-8">
           <Image
             src={HS_Footer}
             alt={"HackerzStreet 3.0"}
-            className={"h-12 w-auto md:h-auto"}
+            className={"h-11 w-auto md:h-auto"}
           />
           <span className="text-5xl font-light md:text-8xl md:font-bold">
             /
@@ -26,32 +26,32 @@ const Footer = () => {
           <Image
             src={CS_Logo}
             alt="IEEE Computer Society MUJ"
-            className={"h-12 w-auto md:h-auto"}
+            className={"h-11 w-auto md:h-auto"}
           />
         </div>
-        <div className="grid w-full grid-cols-1 md:grid-cols-2">
+        <div className="flex w-full flex-row justify-evenly md:grid md:grid-cols-2">
           <div
-            className={`flex flex-col gap-4 border-white px-8 text-center lg:border-r-2 lg:border-l-2 ${poppins.className} py-3`}
+            className={`flex flex-col gap-4 border-r-1 border-white pr-4 text-center md:border-r-2 md:px-8 lg:border-l-2 ${poppins.className} justify-evenly py-3`}
           >
             <div>
-              <p className="text-2xl font-bold">Rishi Joshi</p>
-              <p>+91 95699 13103</p>
-              <p>Chairperson</p>
+              <p className="text-xs font-bold md:text-2xl">Rishi Joshi</p>
+              <p className={"text-tiny md:text-base"}>+91 95699 13103</p>
+              <p className={"text-tiny md:text-base"}>Chairperson</p>
             </div>
             <div>
-              <p className="text-2xl font-bold">Pranav Bhardwaj</p>
-              <p>+91 99995 58266</p>
-              <p>Vice-Chairperson</p>
+              <p className="text-xs font-bold md:text-2xl">Pranav Bhardwaj</p>
+              <p className={"text-tiny md:text-base"}>+91 99995 58266</p>
+              <p className={"text-tiny md:text-base"}>Vice-Chairperson</p>
             </div>
           </div>
           <div
-            className={`flex flex-col items-center justify-center p-16 py-6 text-right lg:items-start ${poppins.className} `}
+            className={`flex flex-col items-center justify-center py-6 pl-4 text-right md:p-16 lg:items-start ${poppins.className} `}
           >
             <div className="flex items-center space-x-2">
               <CiGlobe />
               <a
                 href="https://cs.ieeemuj.com/"
-                className="underline"
+                className="text-xs underline md:text-base"
                 target="_blank"
                 rel="noopener"
               >
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
 
             <div
-              className={`my-4 flex items-center justify-center space-x-4 text-2xl`}
+              className={`my-4 flex items-center justify-center space-x-2 text-2xl *:w-6 md:space-x-4 md:*:w-auto`}
             >
               <Image
                 src="/instagram.svg"
@@ -91,12 +91,11 @@ const Footer = () => {
                 className="cursor-pointer hover:opacity-75"
               />
             </div>
+            <p className="text-tiny text-center md:text-sm">
+              Made with <span className="text-yellow-400">&#x1F49B;</span> by
+              IEEE CS MUJ
+            </p>
           </div>
-
-          <p className="text-center text-sm">
-            Made with <span className="text-yellow-400">&#x1F49B;</span> by IEEE
-            CS MUJ
-          </p>
         </div>
       </div>
     </footer>

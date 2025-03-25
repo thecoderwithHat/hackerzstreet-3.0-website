@@ -61,14 +61,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex w-full items-center justify-between gap-6 rounded-3xl bg-transparent px-8 py-4 shadow-md">
+    <nav className="flex w-full items-center justify-between gap-6 rounded-3xl bg-transparent px-4 py-2 shadow-md md:px-8 md:py-4">
       <div className="flex items-center">
         <Image
           src="https://s3-alpha-sig.figma.com/img/e5ec/a60b/3e05c1069495ebb9d0d74be8cf13e5d8?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ERuxOeJygxabr6J7~xeIJv09TIP9wLMQ9DwWykPRpcbfMW0AVg79D4w7qTgpn86q5ML50asOiB1NwLNf-HwgsOEpt~f51PNuuqlrE5~kti~g-vD9KXRibJttvkGZuPRY6XQaWNMv1i-16rjktiVsrUx2RYdQmvH7RuCCeimz8-ZioDa3y3~M~NxBOyLiPYopucuJyLP5gBxVZuvzZJScXpGim8DrsOAqwC03umrtET84azrZzI-lHmvyHJiwyvI7fOUuxOpZ8hpvK9vAIgIo4f5GU92RE3ZoHNyMDwCf7Q2KPPE-8teyHB86HazvYvhpKOSZoJD6lpKmDd9vo9hHFg__"
           alt="logo"
           width={200}
           height={80}
-          className="rounded-lg p-2"
+          className="h-12 w-auto rounded-lg md:h-20 md:p-2"
         />
       </div>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       <div
         ref={registerRef}
-        className="relative cursor-pointer overflow-hidden rounded-full border border-white px-6 py-2 text-white"
+        className="relative hidden cursor-pointer overflow-hidden rounded-full border border-white px-6 py-2 text-white md:block"
       >
         <span
           ref={registerTextRef}
@@ -101,6 +101,9 @@ const Navbar = () => {
         <div className="hover-text absolute inset-0 z-0 flex items-center justify-center bg-[#FFA300] font-bold tracking-tighter text-white">
           REGISTER
         </div>
+      </div>
+      <div className={"block md:hidden"}>
+        <Image src={"/hamburger.svg"} alt={"hm"} width={20} height={20} />
       </div>
     </nav>
   );
