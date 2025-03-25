@@ -1,13 +1,15 @@
-"use client";
 import Image from "next/image";
 import RightSection from "./RightHome";
-import {Poppins} from "next/font/google";
+import { Poppins } from "next/font/google";
 import HeroBackground from "@/public/backgrounds/hero.svg";
+import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+// import RadialPattern from "@/public/backgrounds/radial.svg";
 // import * as THREE from 'three';
 // import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 // import SplineLoader from '@splinetool/loader';
 // import {useEffect, lazy, Suspense} from "react";
-import {useEffect} from "react";
+// import {useEffect} from "react";
 
 // const Spline = lazy(() => import('@splinetool/react-spline'));
 
@@ -15,72 +17,16 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   variable: "--font-poppins",
   subsets: ["latin"],
+  display: "swap",
 });
 
 function HomePage() {
-
-  // function onLoad() {
-  //   // camera
-  //   const camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, -100000, 100000);
-  //   camera.position.set(2.04, 652.14, 401.2);
-  //   camera.quaternion.setFromEuler(new THREE.Euler(-1.02, 0, 0));
-  //
-  //   // scene
-  //   const scene = new THREE.Scene();
-  //
-  //   // spline scene
-  //   const loader = new SplineLoader();
-  //   loader.load(
-  //     'https://prod.spline.design/WFmytYRSQ4j15Yxp/scene.splinecode',
-  //     (splineScene) => {
-  //       scene.add(splineScene);
-  //     }
-  //   );
-  //
-  //   // renderer
-  //   const renderer = new THREE.WebGLRenderer({antialias: true});
-  //   renderer.setSize(window.innerWidth, window.innerHeight);
-  //   renderer.setAnimationLoop(animate);
-  //   document.body.appendChild(renderer.domElement);
-  //
-  //   // scene settings
-  //   renderer.shadowMap.enabled = true;
-  //   renderer.shadowMap.type = THREE.PCFShadowMap;
-  //
-  //   scene.background = new THREE.Color('#2d2e32');
-  //   renderer.setClearAlpha(0);
-  //
-  //   // orbit controls
-  //   const controls = new OrbitControls(camera, renderer.domElement);
-  //   controls.enableDamping = true;
-  //   controls.dampingFactor = 0.125;
-  //
-  //   window.addEventListener('resize', onWindowResize);
-  //
-  //   function onWindowResize() {
-  //     camera.left = window.innerWidth / -2;
-  //     camera.right = window.innerWidth / 2;
-  //     camera.top = window.innerHeight / 2;
-  //     camera.bottom = window.innerHeight / -2;
-  //     camera.updateProjectionMatrix();
-  //     renderer.setSize(window.innerWidth, window.innerHeight);
-  //   }
-  //
-  //   function animate() {
-  //     controls.update();
-  //     renderer.render(scene, camera);
-  //   }
-  // }
-
-  useEffect(() => {
-    // onLoad();
-  }, []);
-
   return (
+
     <main className="relative bg-black text-white px-20 py-20  mx-5 my-10 rounded-4xl overflow-hidden">
 
 
-<div className="absolute inset-0 overflow-hidden rounded-4xl">
+<div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
   <Image
     draggable="false"
     src={HeroBackground}
@@ -90,10 +36,21 @@ function HomePage() {
 </div>
 
 
+
       {/* Top Section */}
       <div className={``}>
-        <h1 className="text-8xl font-bold font-yapari">HACKERZSTREET</h1>
-        <p className={`text-ieeeyellow text-lg text-left font-bold mt-2 font-yapari`}>
+        <h1 className="font-yapari hidden text-8xl font-bold md:block">
+          HACKERZSTREET
+        </h1>
+        <h1 className="font-yapari block text-4xl font-bold md:hidden">
+          HACKERZ
+        </h1>
+        <h1 className="font-yapari block text-4xl font-bold md:hidden">
+          STREET
+        </h1>
+        <p
+          className={`text-ieeeyellow font-yapari mt-2 text-left text-xs font-bold md:text-lg`}
+        >
           A 24-HOUR FLAGSHIP HACKATHON
           <br></br>
           BY IEEE CS MUJ
@@ -101,31 +58,51 @@ function HomePage() {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="relative grid h-full grid-cols-2 gap-8">
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-4 pt-10">
-          <span className="text-6xl font-bold font-yapari">3.0</span>
-          <p className={`text-sm md:text-base ${poppins.className}`}>
+          <span className="font-yapari text-4xl font-bold md:text-6xl">
+            3.0
+          </span>
+          <p className={`text-tiny md:text-base ${poppins.className}`}>
             Hackerzstreet 3.0, set to ignite creativity and innovation – an
             intense 24-hour coding marathon packed with excitement and
-            collaboration. This event features a single round where
-            participants delve into diverse technical themes, each presenting
-            unique challenges and opportunities.
+            collaboration. This event features a single round where participants
+            delve into diverse technical themes, each presenting unique
+            challenges and opportunities.
           </p>
 
-          <div className="relative flex items-center space-x-2 bg-transparent cursor-pointer mt-10">
-            <div className="font-bold rounded-full border-white/50 border-[1px] py-3 px-10">
+          <div className="relative mt-2 flex cursor-pointer items-center space-x-2 bg-transparent md:mt-10">
+            <div className="w-40 rounded-full border-[1px] border-white/50 px-3 py-2 text-xs font-bold md:w-72 md:px-10 md:py-3 md:text-base">
               Want to know more?
               <br></br>
-              <span className={"text-white/50 text-sm font-light"}>Scroll to find out!</span>
+              <span className={"text-tiny font-light text-white/50 md:text-sm"}>
+                Scroll to find out!
+              </span>
             </div>
             <Image
               src={"/down.svg"}
               alt={"down arrow"}
               width={70}
               height={70}
-              className={"absolute -right-10"}
+              className={
+                "absolute -right-5 h-12 w-12 md:-right-10 md:h-auto md:w-auto"
+              }
             />
+          </div>
+          <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10 *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2 *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out *:hover:text-black md:hidden">
+            <div className="">
+              <FaInstagram className={"h-4 md:h-8 md:w-6"} />
+            </div>
+            <div className="">
+              <FaLinkedin className={"h-4 md:h-8 md:w-6"} />
+            </div>
+            <div className="">
+              <FaMedium className={"h-4 md:h-8 md:w-6"} />
+            </div>
+            <div className="">
+              <FaXTwitter className={"h-4 md:h-8 md:w-6"} />
+            </div>
           </div>
         </div>
 
@@ -143,7 +120,7 @@ function HomePage() {
         {/*</Suspense>*/}
 
         {/* Right Section */}
-        <RightSection/>
+        <RightSection />
       </div>
     </main>
   );
