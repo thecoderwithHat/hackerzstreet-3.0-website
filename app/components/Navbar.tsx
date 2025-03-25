@@ -64,10 +64,10 @@ const Navbar = () => {
     <nav className="flex w-full items-center justify-between gap-6 rounded-3xl bg-transparent px-4 py-2 shadow-md md:px-8 md:py-4">
       <div className="flex items-center">
         <Image
-          src="https://s3-alpha-sig.figma.com/img/e5ec/a60b/3e05c1069495ebb9d0d74be8cf13e5d8?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ERuxOeJygxabr6J7~xeIJv09TIP9wLMQ9DwWykPRpcbfMW0AVg79D4w7qTgpn86q5ML50asOiB1NwLNf-HwgsOEpt~f51PNuuqlrE5~kti~g-vD9KXRibJttvkGZuPRY6XQaWNMv1i-16rjktiVsrUx2RYdQmvH7RuCCeimz8-ZioDa3y3~M~NxBOyLiPYopucuJyLP5gBxVZuvzZJScXpGim8DrsOAqwC03umrtET84azrZzI-lHmvyHJiwyvI7fOUuxOpZ8hpvK9vAIgIo4f5GU92RE3ZoHNyMDwCf7Q2KPPE-8teyHB86HazvYvhpKOSZoJD6lpKmDd9vo9hHFg__"
-          alt="logo"
-          width={200}
-          height={80}
+          src="/cs_logo.svg"
+          alt="cs_logo"
+          width={100}
+          height={40}
           className="h-12 w-auto rounded-lg md:h-20 md:p-2"
         />
       </div>
