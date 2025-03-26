@@ -4,14 +4,8 @@ import { Poppins } from "next/font/google";
 import HeroBackground from "@/public/backgrounds/hero.svg";
 import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-// import RadialPattern from "@/public/backgrounds/radial.svg";
-// import * as THREE from 'three';
-// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-// import SplineLoader from '@splinetool/loader';
-// import {useEffect, lazy, Suspense} from "react";
-// import {useEffect} from "react";
-
-// const Spline = lazy(() => import('@splinetool/react-spline'));
+import RadialPattern from "@/public/backgrounds/radial.svg";
+import RadialPatternMobile from "@/public/backgrounds/radial_mobile.svg";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
@@ -30,14 +24,6 @@ function HomePage() {
           className={"h-auto w-full"}
         />
       </div>
-      {/*<div className={"absolute h-full z-10"}>*/}
-      {/*  <Image*/}
-      {/*    src={RadialPattern}*/}
-      {/*    alt={"radial pattern"}*/}
-      {/*    width={600}*/}
-      {/*    height={600}*/}
-      {/*  />*/}
-      {/*</div>*/}
       {/* Top Section */}
       <div className={``}>
         <h1 className="font-yapari hidden text-8xl font-bold md:block">
@@ -59,7 +45,7 @@ function HomePage() {
       </div>
 
       {/* Grid Section */}
-      <div className="relative grid h-full grid-cols-2 gap-8">
+      <div className="relative grid h-full grid-cols-2 grid-rows-1 gap-8 md:grid-cols-4">
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-4 pt-10">
           <span className="font-yapari text-4xl font-bold md:text-6xl">
@@ -108,20 +94,37 @@ function HomePage() {
         </div>
 
         {/* Center Section */}
-        {/*<Suspense fallback={<div>Loading...</div>}>*/}
-        {/*  <Spline*/}
-        {/*    scene="https://prod.spline.design/WFmytYRSQ4j15Yxp/scene.splinecode"*/}
-        {/*    className={"w-full absolute top-80 left-80"}*/}
-        {/*    onLoad={() => {*/}
-        {/*      console.log("Loaded");*/}
-        {/*      const canvas = document.getElementsByTagName("canvas")[0];*/}
-        {/*      canvas.ariaDisabled = "true";*/}
-        {/*    }}*/}
-        {/*  />*/}
-        {/*</Suspense>*/}
+        <div
+          className={
+            `relative -right-[80px] -bottom-[86px] col-start-2 col-end-4 hidden 
+            h-full w-full items-end justify-end md:flex`
+          }
+        >
+          <Image
+            src={RadialPattern}
+            alt={"radial pattern"}
+            width={800}
+            height={800}
+            className={"w-full"}
+          />
+        </div>
 
         {/* Right Section */}
         <RightSection />
+        <div
+          className={
+            `relative flex -top-[80px]
+            h-full w-full items-start md:hidden col-start-1 col-end-3`
+          }
+        >
+          <Image
+            src={RadialPatternMobile}
+            alt={"radial pattern"}
+            width={800}
+            height={800}
+            className={"w-full"}
+          />
+        </div>
       </div>
     </main>
   );
