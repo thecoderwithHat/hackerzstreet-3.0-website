@@ -45,10 +45,10 @@ const About = () => {
     <section
       id="about"
 
-      className="bg-transparent my-16 text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
+      className="bg-transparent my-12 text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
 
     >
-      <h1 className={`text-8xl font-bold text-center tracking-tighter font-yapari pt-20`}>
+      <h1 className={`text-8xl font-bold text-center tracking-tighter font-yapari `}>
         ABOUT US
       </h1>
 

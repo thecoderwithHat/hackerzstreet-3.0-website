@@ -61,8 +61,6 @@ const Navbar = () => {
   }, []);
 
   return (
-
-
     <nav className="flex w-full items-center justify-between gap-6 rounded-3xl bg-transparent px-4 py-2 shadow-md md:px-8 md:py-4">
       <div className="flex items-center">
         <Image
@@ -71,8 +69,6 @@ const Navbar = () => {
           width={100}
           height={40}
           className="h-12 w-auto rounded-lg md:h-20 md:p-2"
-          draggable="false"
-
         />
       </div>
 
@@ -94,12 +90,16 @@ const Navbar = () => {
 
       <div
         ref={registerRef}
-        className="relative border border-white text-white px-12 py-2 rounded-full overflow-hidden cursor-pointer"
+        className="relative hidden cursor-pointer overflow-hidden rounded-full border border-white px-6 py-2 text-white md:block"
       >
-        <span ref={registerTextRef} className="relative z-10 font-bold tracking-tighter">REGISTER</span>
-        <div className="hover-text absolute inset-0 bg-[#FFA300] text-white flex items-center text-[15px] justify-center font-bold z-0 tracking-tighter">
-          YES! CLICK HERE
-
+        <span
+          ref={registerTextRef}
+          className="relative z-10 font-bold tracking-tighter"
+        >
+          REGISTER
+        </span>
+        <div className="hover-text absolute inset-0 z-0 flex items-center justify-center bg-[#FFA300] font-bold tracking-tighter text-white">
+          REGISTER
         </div>
       </div>
       <div className={"block md:hidden"}>

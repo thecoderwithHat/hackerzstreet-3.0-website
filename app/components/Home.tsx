@@ -4,14 +4,8 @@ import { Poppins } from "next/font/google";
 import HeroBackground from "@/public/backgrounds/hero.svg";
 import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-// import RadialPattern from "@/public/backgrounds/radial.svg";
-// import * as THREE from 'three';
-// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-// import SplineLoader from '@splinetool/loader';
-// import {useEffect, lazy, Suspense} from "react";
-// import {useEffect} from "react";
-
-// const Spline = lazy(() => import('@splinetool/react-spline'));
+import RadialPattern from "@/public/backgrounds/radial.svg";
+import RadialPatternMobile from "@/public/backgrounds/radial_mobile.svg";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
@@ -22,20 +16,16 @@ const poppins = Poppins({
 
 function HomePage() {
   return (
-
-    <main className="relative bg-black text-white  px-20 py-20  mx-5 my-10 rounded-4xl overflow-hidden">
-
-
-    <div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
-      <Image
-        draggable="false"
-        src={HeroBackground}
-        alt="Background"
-        className="w-full h-full object-cover"
-      />
-    </div>
-    
-
+    <main className="relative mx-2 rounded-4xl bg-black px-5 py-10 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10">
+      <div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
+        <Image
+          draggable="false"
+          src={HeroBackground}
+          alt="Background"
+          className="h-full w-full object-cover"
+        />
+      </div>
+      {/* Top Section */}
       <div className={``}>
         <h1 className="font-yapari hidden text-8xl font-bold md:block">
           HACKERZSTREET
@@ -56,7 +46,7 @@ function HomePage() {
       </div>
 
       {/* Grid Section */}
-      <div className="relative grid h-full grid-cols-2 gap-8">
+      <div className="relative grid h-full grid-cols-2 grid-rows-1 md:grid-cols-4 md:gap-8">
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-4 pt-10">
           <span className="font-yapari text-4xl font-bold md:text-6xl">
@@ -105,20 +95,31 @@ function HomePage() {
         </div>
 
         {/* Center Section */}
-        {/*<Suspense fallback={<div>Loading...</div>}>*/}
-        {/*  <Spline*/}
-        {/*    scene="https://prod.spline.design/WFmytYRSQ4j15Yxp/scene.splinecode"*/}
-        {/*    className={"w-full absolute top-80 left-80"}*/}
-        {/*    onLoad={() => {*/}
-        {/*      console.log("Loaded");*/}
-        {/*      const canvas = document.getElementsByTagName("canvas")[0];*/}
-        {/*      canvas.ariaDisabled = "true";*/}
-        {/*    }}*/}
-        {/*  />*/}
-        {/*</Suspense>*/}
+        <div
+          className={`relative -right-[80px] -bottom-[40px] col-start-2 col-end-4 hidden h-full w-full items-end justify-end md:flex`}
+        >
+          <Image
+            src={RadialPattern}
+            alt={"radial pattern"}
+            width={800}
+            height={800}
+            className={"w-full"}
+          />
+        </div>
 
         {/* Right Section */}
         <RightSection />
+        <div
+          className={`relative col-start-1 col-end-3 flex h-full w-full items-start md:hidden`}
+        >
+          <Image
+            src={RadialPatternMobile}
+            alt={"radial pattern"}
+            width={800}
+            height={800}
+            className={"w-full"}
+          />
+        </div>
       </div>
     </main>
   );
