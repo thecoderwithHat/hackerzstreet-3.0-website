@@ -58,32 +58,74 @@ function Tracks() {
       {/* Responsive Grid */}
       <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_1.svg" alt="Track 1" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_1.svg"
+              alt="Track 1"
+            />
+          }
           title="Sustainable Living"
           description="Focuses on reducing environmental impact. It includes carbon footprint tracking, waste management, and eco-friendly shopping, with an aim to conserve resources like water."
         />
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_2.svg" alt="Track 2" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_2.svg"
+              alt="Track 2"
+            />
+          }
           title="Healthcare Technology"
           description="Advances in remote patient monitoring and emphasizes mental health support."
         />
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_3.svg" alt="Track 3" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_3.svg"
+              alt="Track 3"
+            />
+          }
           title="Social Connectivity and Inclusion"
           description="Promotes digital accessibility, encourages language learning and cultural exchange, and bridges generational gaps."
         />
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_1.svg" alt="Track 1" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_1.svg"
+              alt="Track 1"
+            />
+          }
           title="Sustainable Living"
           description="Focuses on reducing environmental impact. It includes carbon footprint tracking, waste management, and eco-friendly shopping, with an aim to conserve resources like water."
         />
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_2.svg" alt="Track 2" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_2.svg"
+              alt="Track 2"
+            />
+          }
           title="Healthcare Technology"
           description="Advances in remote patient monitoring and emphasizes mental health support."
         />
         <TrackItem
-          icon={<Image width={100} height={100} src="/track_icon_3.svg" alt="Track 3" />}
+          icon={
+            <Image
+              width={100}
+              height={100}
+              src="/track_icon_3.svg"
+              alt="Track 3"
+            />
+          }
           title="Social Connectivity and Inclusion"
           description="Promotes digital accessibility, encourages language learning and cultural exchange, and bridges generational gaps."
         />
