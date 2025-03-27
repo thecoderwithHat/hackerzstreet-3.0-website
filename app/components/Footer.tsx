@@ -3,6 +3,8 @@ import HS_Footer from "@/public/hs_footer.svg";
 import CS_Logo from "@/public/ieee_cs.svg";
 import { CiGlobe } from "react-icons/ci";
 import { Poppins } from "next/font/google";
+import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
@@ -13,7 +15,7 @@ const poppins = Poppins({
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10">
+    <footer id={"contact"} className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10">
       <div className="flex w-full flex-wrap items-center gap-8 md:grid md:grid-cols-2 lg:gap-0">
         <div className="flex w-full flex-wrap items-center justify-evenly md:gap-8 md:px-8">
           <Image
@@ -66,36 +68,20 @@ const Footer = () => {
             </div>
 
             <div
-              className={`my-4 flex items-center justify-center space-x-2 text-2xl *:w-6 md:space-x-4 md:*:w-auto`}
+              className={`my-4 flex items-center justify-center space-x-2 text-2xl md:space-x-4 md:*:w-auto`}
             >
-              <Image
-                src="/instagram.svg"
-                alt="Instagram"
-                width={40}
-                height={40}
-                className="cursor-pointer hover:opacity-75"
-              />
-              <Image
-                src="/linkedin.svg"
-                alt="LinkedIn"
-                width={40}
-                height={40}
-                className="cursor-pointer hover:opacity-75"
-              />
-              <Image
-                src="/medium.svg"
-                alt="Medium"
-                width={40}
-                height={40}
-                className="cursor-pointer hover:opacity-75"
-              />
-              <Image
-                src="/x.svg"
-                alt="X (formerly Twitter)"
-                width={40}
-                height={40}
-                className="cursor-pointer hover:opacity-75"
-              />
+              <div className="">
+                <FaInstagram className={"h-4 md:h-8 md:w-6"} />
+              </div>
+              <div className="">
+                <FaLinkedin className={"h-4 md:h-8 md:w-6"} />
+              </div>
+              <div className="">
+                <FaMedium className={"h-4 md:h-8 md:w-6"} />
+              </div>
+              <div className="">
+                <FaXTwitter className={"h-4 md:h-8 md:w-6"} />
+              </div>
             </div>
             <p className="text-tiny text-center md:text-sm">
               Made with <span className="text-yellow-400">&#x1F49B;</span> by
