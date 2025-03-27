@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 function HomePage() {
   return (
-    <main className="relative rounded-4xl bg-black px-5 py-10 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10">
+    <main className="relative mx-2 rounded-4xl bg-black px-5 py-10 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10">
       <div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
         <Image
           draggable="false"
@@ -46,7 +46,7 @@ function HomePage() {
       </div>
 
       {/* Grid Section */}
-      <div className="relative grid h-full grid-cols-2 grid-rows-1 gap-8 md:grid-cols-4">
+      <div className="relative grid h-full grid-cols-2 grid-rows-1 md:grid-cols-4 md:gap-8">
         {/* Left Section */}
         <div className="flex flex-col items-start space-y-4 pt-10">
           <span className="font-yapari text-4xl font-bold md:text-6xl">
@@ -110,7 +110,7 @@ function HomePage() {
         {/* Right Section */}
         <RightSection />
         <div
-          className={`relative -top-[80px] col-start-1 col-end-3 flex h-full w-full items-start md:hidden`}
+          className={`relative col-start-1 col-end-3 flex h-full w-full items-start md:hidden`}
         >
           <Image
             src={RadialPatternMobile}
