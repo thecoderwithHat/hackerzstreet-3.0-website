@@ -27,7 +27,7 @@ function HomePage() {
       </div>
       {/* Top Section */}
       <div className={``}>
-        <h1 className="font-yapari hidden text-8xl font-bold md:block">
+        <h1 className="font-yapari hidden text-5xl font-bold md:block lg:text-6xl xl:text-7xl 2xl:text-8xl">
           HACKERZSTREET
         </h1>
         <h1 className="font-yapari block text-4xl font-bold md:hidden">
@@ -104,6 +104,7 @@ function HomePage() {
             width={800}
             height={800}
             className={"w-full"}
+            draggable={false}
           />
         </div>
 
@@ -118,6 +119,7 @@ function HomePage() {
             width={800}
             height={800}
             className={"w-full"}
+            draggable={false}
           />
         </div>
       </div>
