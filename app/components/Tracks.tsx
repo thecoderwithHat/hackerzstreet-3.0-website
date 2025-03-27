@@ -54,7 +54,9 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 
 function Tracks() {
   return (
-    <main className="bg bg-black text-white mx-2  px-5 py-15 pb-10 my-10 md:mx-5 md:my-10 md:px-20  md:pb-10 rounded-4xl overflow-x-hidden ">
+    <main 
+    id="tracks"
+    className="bg bg-black text-white mx-2  px-5 py-15 pb-10 my-10 md:mx-5 md:my-10 md:px-20  md:pb-10 rounded-4xl overflow-x-hidden ">
       <div className="flex flex-col items-center z-10">
         <h1 className="text-5xl md:text-7xl font-semibold font-yapari">TRACKS</h1>
         <p
