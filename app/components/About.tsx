@@ -44,23 +44,21 @@ const About = () => {
   return (
     <section
       id="about"
-
       className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-8 py-16 pt-0 text-white md:pt-16"
     >
       <h1
         className={`font-yapari pt-20 text-center text-4xl font-bold tracking-tighter md:pt-0 md:text-7xl`}
       >
-
         ABOUT US
       </h1>
 
-      <h2 className={`text-ieeeyellow text-2xl font-bold text-center w-full mb-12 ${poppins.className} font-extrabold`}>
+      <h2
+        className={`text-ieeeyellow mb-12 w-full text-center text-xl font-bold ${poppins.className} font-extrabold`}
+      >
         IEEE COMPUTER SOCIETY MUJ
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-[80%]">
-
-
+      <div className="grid w-full max-w-[80%] grid-cols-1 gap-12 md:grid-cols-2">
         <div className="flex items-center justify-center md:justify-start">
           <div
             ref={logoRef}
@@ -75,11 +73,7 @@ const About = () => {
               alt="IEEE CS Logo"
               width={400}
               height={400}
-
-
               className={"rounded-full object-cover"}
-
-
             />
           </div>
         </div>

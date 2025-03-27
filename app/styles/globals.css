@@ -37,7 +37,9 @@
   }
 }
 
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%; /* Make sure the root and body take up full height */
 }
 
@@ -50,7 +52,6 @@ main {
   flex-grow: 1; /* Ensures the main content takes up remaining height */
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -60,11 +61,10 @@ body {
 .bg-pattern {
   background-color: var(--background);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 70px 70px; /* Adjust size of grid */
 }
-
 
 .bg-pattern::before {
   content: "";

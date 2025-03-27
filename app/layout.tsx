@@ -16,10 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body className={`antialiased bg-pattern `}>
+      <body className={`bg-pattern antialiased`}>
         <Navbar />
-        <main >{children}</main>
+        <main>{children}</main>
 
         <Footer />
       </body>
