@@ -5,7 +5,7 @@ import gsap from "gsap";
 
 const navLinks = [
   { name: "Home", id: "home" },
-  { name: "Schedules", id: "schedules" },
+  { name: "Schedule", id: "schedule" },
   { name: "Tracks", id: "tracks" },
   { name: "About Us", id: "about" },
   { name: "Contact", id: "contact" },

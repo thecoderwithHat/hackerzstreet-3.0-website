@@ -42,7 +42,10 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 
 function Tracks() {
   return (
-    <main className="bg mx-2 overflow-x-hidden rounded-4xl bg-black px-5 py-15 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10">
+    <section
+      id={"tracks"}
+      className="bg mx-2 overflow-x-hidden rounded-4xl bg-black px-5 py-15 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10"
+    >
       <div className="z-10 flex flex-col items-center">
         <h1 className="font-yapari text-4xl font-semibold md:text-8xl">
           TRACKS
@@ -130,7 +133,7 @@ function Tracks() {
           description="Promotes digital accessibility, encourages language learning and cultural exchange, and bridges generational gaps."
         />
       </div>
-    </main>
+    </section>
   );
 }
 
