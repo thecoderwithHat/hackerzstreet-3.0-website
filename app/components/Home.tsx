@@ -16,12 +16,13 @@ const poppins = Poppins({
 
 function HomePage() {
   return (
-    <main className="bg-black px-5 py-10 text-white md:px-20">
-      <div className={"absolute top-0 left-0 hidden h-full w-screen md:block"}>
+    <main className="relative rounded-4xl bg-black px-5 py-10 pb-0 text-white md:mx-5 md:my-10 md:px-20 md:pb-10">
+      <div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
         <Image
+          draggable="false"
           src={HeroBackground}
-          alt={"Background"}
-          className={"h-auto w-full"}
+          alt="Background"
+          className="h-full w-full object-cover"
         />
       </div>
       {/* Top Section */}
@@ -95,10 +96,7 @@ function HomePage() {
 
         {/* Center Section */}
         <div
-          className={
-            `relative -right-[80px] -bottom-[86px] col-start-2 col-end-4 hidden 
-            h-full w-full items-end justify-end md:flex`
-          }
+          className={`relative -right-[80px] -bottom-[40px] col-start-2 col-end-4 hidden h-full w-full items-end justify-end md:flex`}
         >
           <Image
             src={RadialPattern}
@@ -112,10 +110,7 @@ function HomePage() {
         {/* Right Section */}
         <RightSection />
         <div
-          className={
-            `relative flex -top-[80px]
-            h-full w-full items-start md:hidden col-start-1 col-end-3`
-          }
+          className={`relative -top-[80px] col-start-1 col-end-3 flex h-full w-full items-start md:hidden`}
         >
           <Image
             src={RadialPatternMobile}
