@@ -3,7 +3,6 @@ import { Poppins } from "next/font/google";
 import ArrowRight from "@/public/arrow_right.svg";
 import ArrowLeft from "@/public/arrow_left.svg";
 import ArrowTopLeft from "@/public/arrow_top_left.svg";
-import ArrowTopRight from "@/public/arrow_top_right.svg";
 import ScheduleBox from "@/app/components/ScheduleBox";
 import Image from "next/image";
 
@@ -13,16 +12,6 @@ const LeftArrow = () => {
 
 const RightArrow = () => {
   return <Image src={ArrowRight} alt={"right_arrow"} className={`w-24`} />;
-};
-
-const RightDownArrow = () => {
-  return (
-    <Image
-      src={ArrowTopRight}
-      alt={"right_arrow"}
-      className={`relative ml-10 w-24 -translate-y-2/6 transform`}
-    />
-  );
 };
 
 const LeftDownArrow = () => {
@@ -122,30 +111,23 @@ function Schedule() {
             <label className={"text-ieeeyellow text-4xl"}>04</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
-          <ScheduleBox time={schedule[0].time} text={schedule[0].text} />
-          <RightArrow />
           <ScheduleBox time={schedule[1].time} text={schedule[1].text} />
           <RightArrow />
           <ScheduleBox time={schedule[2].time} text={schedule[2].text} />
+          <RightArrow />
+          <ScheduleBox time={schedule[3].time} text={schedule[3].text} />
         </div>
 
         <div className={"flex flex-row-reverse"}>
           <LeftDownArrow />
-          <ScheduleBox time={schedule[3].time} text={schedule[3].text} />
-          <LeftArrow />
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
             <label className={"text-ieeeyellow text-4xl"}>05</label>
             <label className={"text-xl text-white"}>April</label>
           </div>
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
           <LeftArrow />
-          <ScheduleBox time={schedule[5].time} text={schedule[5].text} />
-        </div>
-
-        <div className={"flex flex-row"}>
-          <RightDownArrow />
           <ScheduleBox time={schedule[6].time} text={schedule[6].text} />
-          <RightArrow />
+          <LeftArrow />
           <ScheduleBox time={schedule[7].time} text={schedule[7].text} />
         </div>
 
