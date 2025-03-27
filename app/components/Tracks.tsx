@@ -27,7 +27,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleActive = () => {
-    setIsActive((prev) => !prev);
+    setIsActive(!isActive);
   };
 
   return (
@@ -49,8 +49,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
         className={`absolute bottom-0 left-0 z-10 w-full px-4 py-6 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
       >
         <p
-          className={`text-center text-lg font-medium md:text-lg ${poppins.className}`}
-          style={{ lineHeight: "1.4rem" }}
+          className={`text-center text-lg font-medium md:text-lg ${poppins.className} leading-6`}
         >
           <span className="text-ieeeyellow">{title}</span>
           <span className="text-white"> {description}</span>
@@ -109,8 +108,7 @@ function Tracks() {
           TRACKS
         </h1>
         <p
-          className={`sm:lg mt-1 text-sm font-medium md:text-xl ${poppins.className}`}
-          style={{ textAlign: "center", lineHeight: "1.5rem" }}
+          className={`sm:lg mt-1 text-sm font-medium md:text-xl ${poppins.className} text-center leading-6`}
         >
           Choose any one from the following themes for your project
         </p>
