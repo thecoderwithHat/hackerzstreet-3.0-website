@@ -2,6 +2,7 @@ import React from "react";
 import { Poppins } from "next/font/google";
 import ArrowRight from "@/public/arrows/arrow_right.svg";
 import ArrowLeft from "@/public/arrows/arrow_left.svg";
+import ArrowDown from "@/public/arrows/arrow_down.svg";
 import ArrowTopLeft from "@/public/arrows/arrow_top_left.svg";
 import ScheduleBox from "@/app/components/ScheduleBox";
 import Image from "next/image";
@@ -24,6 +25,17 @@ const RightArrow = () => {
       draggable={false}
       alt={"right_arrow"}
       className={`w-24`}
+    />
+  );
+};
+
+const DownArrow = () => {
+  return (
+    <Image
+      src={ArrowDown}
+      alt={"down_arrow"}
+      className={`w-10`}
+      draggable={false}
     />
   );
 };
@@ -98,20 +110,20 @@ const schedule2 = [
 
 function Schedule() {
   return (
-    <section id="schedule" className={"px-10"}>
+    <section id="schedule" className={"px-2 pb-10 md:px-10 md:pb-0"}>
       <h1
-        className={`font-yapari pt-20 text-center text-4xl font-bold tracking-tighter text-white md:text-7xl`}
+        className={`font-yapari pt-10 text-center text-3xl font-bold tracking-tighter text-white md:pt-20 md:text-7xl`}
       >
         SCHEDULE
       </h1>
       <h2
-        className={`text-ieeeyellow mb-12 w-full text-center text-xl font-bold ${poppins.className} font-extrabold`}
+        className={`text-ieeeyellow mb-12 w-full text-center text-sm font-bold md:text-xl ${poppins.className} font-extrabold`}
       >
         Elevate your skills and collaborate with fellow coders!
       </h2>
 
       <div
-        className={`flex flex-col gap-12 rounded-4xl px-10 py-10 outline-2 outline-white outline-dashed *:flex-grow *:items-center *:gap-4`}
+        className={`hidden flex-col gap-12 rounded-4xl px-10 py-10 outline-2 outline-white outline-dashed *:flex-grow *:items-center *:gap-4 xl:flex`}
       >
         <label
           className={
@@ -156,13 +168,79 @@ function Schedule() {
 
         <div className={"flex flex-row"}>
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>11</label>
+            <label className={"text-ieeeyellow text-4xl"}>12</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
           <ScheduleBox time={schedule2[0].time} text={schedule2[0].text} />
           <RightArrow />
           <ScheduleBox time={schedule2[1].time} text={schedule2[1].text} />
           <RightArrow />
+          <ScheduleBox time={schedule2[2].time} text={schedule2[2].text} />
+        </div>
+      </div>
+
+      <div
+        className={`flex flex-col gap-12 rounded-4xl px-2 py-10 outline-2 outline-white outline-dashed *:flex-grow *:items-center *:gap-4 xl:hidden`}
+      >
+        <label
+          className={
+            "text-ieeeyellow font-yapari -mb-5 text-center text-xl font-bold underline"
+          }
+        >
+          Round 1
+        </label>
+
+        <div className={"flex flex-col"}>
+          <div
+            className={
+              "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
+            }
+          >
+            <label className={"text-ieeeyellow"}>11</label>
+            <label className={"text-xl text-white"}>April</label>
+          </div>
+          <ScheduleBox time={schedule[1].time} text={schedule[1].text} />
+          <DownArrow />
+          <ScheduleBox time={schedule[2].time} text={schedule[2].text} />
+          <DownArrow />
+          <ScheduleBox time={schedule[3].time} text={schedule[3].text} />
+          <DownArrow />
+          <div
+            className={
+              "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
+            }
+          >
+            <label className={"text-ieeeyellow"}>12</label>
+            <label className={"text-xl text-white"}>April</label>
+          </div>
+          <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
+          <DownArrow />
+          <ScheduleBox time={schedule[6].time} text={schedule[6].text} />
+          <DownArrow />
+          <ScheduleBox time={schedule[7].time} text={schedule[7].text} />
+        </div>
+
+        <label
+          className={
+            "text-ieeeyellow font-yapari mt-5 -mb-5 text-center text-xl font-bold underline"
+          }
+        >
+          Round 2
+        </label>
+
+        <div className={"flex flex-col"}>
+          <div
+            className={
+              "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
+            }
+          >
+            <label className={"text-ieeeyellow"}>12</label>
+            <label className={"text-xl text-white"}>April</label>
+          </div>
+          <ScheduleBox time={schedule2[0].time} text={schedule2[0].text} />
+          <DownArrow />
+          <ScheduleBox time={schedule2[1].time} text={schedule2[1].text} />
+          <DownArrow />
           <ScheduleBox time={schedule2[2].time} text={schedule2[2].text} />
         </div>
       </div>

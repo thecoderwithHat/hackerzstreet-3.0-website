@@ -10,12 +10,12 @@ const poppins = Poppins({
 function ScheduleBox({ time, text }: { time: string; text: string }) {
   return (
     <div
-      className={`flex ${poppins.className} h-32 min-w-72 flex-col items-center rounded-4xl bg-[#1c1c1c] p-4 text-white outline-1 outline-[#F1F1F1] outline-dashed`}
+      className={`flex ${poppins.className} h-28 min-w-full flex-col items-center rounded-4xl bg-[#1c1c1c] p-4 text-white outline-1 outline-[#F1F1F1] outline-dashed md:h-32 md:min-w-72`}
     >
-      <p className="w-36 rounded-full bg-[#3a3a3a] py-2 text-center font-bold text-white">
+      <p className="w-32 rounded-full bg-[#3a3a3a] py-2 text-center text-sm font-bold text-white md:w-36 md:text-base">
         {time}
       </p>
-      <p className={`mt-4 text-center text-sm`}>{text}</p>
+      <p className={`text-tiny mt-4 text-center md:text-sm`}>{text}</p>
     </div>
   );
 }

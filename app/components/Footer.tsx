@@ -15,7 +15,10 @@ const poppins = Poppins({
 
 const Footer = () => {
   return (
-    <footer id={"contact"} className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10">
+    <footer
+      id={"contact"}
+      className="bg-gradient-to-t from-[#FFA300] to-black px-5 py-8 text-white md:px-10"
+    >
       <div className="flex w-full flex-wrap items-center gap-8 md:grid md:grid-cols-2 lg:gap-0">
         <div className="flex w-full flex-wrap items-center justify-evenly md:gap-8 md:px-8">
           <Image
