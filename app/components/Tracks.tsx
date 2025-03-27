@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Poppins } from "next/font/google";
 import "@/app/styles/tracks.css";
 
@@ -16,29 +16,32 @@ type TrackItemProps = {
 };
 
 const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
+  const [trackActive, setTrackActive] = useState(false);
+
   return (
-    <div className="border-2 border-dashed border-white/50 rounded-3xl overflow-hidden group transition-all duration-300 ease-in-out relative">
-      {/* SVG Layer */}
+    <div
+      className={`border-2 border-dashed border-white/50 rounded-3xl overflow-hidden group transition-all duration-300 ease-in-out relative hover:bg-[#201a12] hover:backdrop-blur-3xl ${trackActive ? 'bg-[#201a12] backdrop-blur-3xl' : ''}`}
+      onClick={() => setTrackActive(!trackActive)} 
+    >
+      
       <div
-        className="flex items-center justify-center h-72 w-full 
-          hover:bg-[#201a12] hover:backdrop-blur-3xl rounded-3xl relative"
+        className="flex items-center justify-center h-72 w-full rounded-3xl relative"
       >
         <div
-          className="transition-all duration-300 ease-in-out transform 
-            group-hover:scale-75 group-hover:-translate-y-16 z-0 pointer-events-none"
+          className={`transition-all duration-300 ease-in-out transform group-hover:scale-75 group-hover:-translate-y-16
+            ${trackActive ? 'scale-75 -translate-y-16' : ''}`}
         >
           {icon}
         </div>
       </div>
 
-      {/* Text Layer */}
+
       <div
-        className="absolute bottom-0 left-0 w-full px-4 py-6 opacity-0 translate-y-16
-          transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 z-10"
-  
+        className={`absolute bottom-0 left-0 w-full px-4 py-4 md:px-4 md:py-6 transition-all duration-500 ease-in-out group-hover:opacity-100  group-hover:translate-y-0
+          ${trackActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
       >
         <p
-          className={`text-center text-lg md:text-lg font-medium ${poppins.className}`}
+          className={`text-center text-sm  md:text-lg lg:text-md font-medium ${poppins.className}`}
           style={{ lineHeight: "1.4rem" }}
         >
           <span className="text-ieeeyellow">{title}</span>
@@ -51,18 +54,18 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 
 function Tracks() {
   return (
-    <main className="bg bg-black text-white mx-2  px-5 py-15 pb-0 md:mx-5 md:my-10 md:px-20 md:pb-10 rounded-4xl overflow-x-hidden ">
+    <main className="bg bg-black text-white mx-2  px-5 py-15 pb-10 my-10 md:mx-5 md:my-10 md:px-20  md:pb-10 rounded-4xl overflow-x-hidden ">
       <div className="flex flex-col items-center z-10">
-        <h1 className="text-4xl md:text-8xl font-semibold font-yapari">TRACKS</h1>
+        <h1 className="text-5xl md:text-7xl font-semibold font-yapari">TRACKS</h1>
         <p
-          className={`text-2xl md:text-xl sm:lg font-medium mt-1 ${poppins.className}`}
+          className={`text-lg md:text-2xl font-medium mt-1 ${poppins.className}`}
           style={{ textAlign: "center", lineHeight: "1.5rem" }}
         >
           Choose any one from the following themes for your project
         </p>
       </div>
 
-      {/* Responsive Grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
         <TrackItem
           icon={<img src="/track_icon_1.svg" alt="Track 1" />}
