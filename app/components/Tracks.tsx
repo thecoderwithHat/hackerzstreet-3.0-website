@@ -4,6 +4,13 @@ import { Poppins } from "next/font/google";
 import "@/app/styles/tracks.css";
 import Image from "next/image";
 
+import HealthcareIcon from "@/public/trackIcons/healthcare.svg";
+import FintechIcon from "@/public/trackIcons/fintech.svg";
+import EdtechIcon from "@/public/trackIcons/edtech.svg";
+import BlockchainIcon from "@/public/trackIcons/blockchain.svg";
+import Environmental from "@/public/trackIcons/environmental.png";
+import NetworkingIcon from "@/public/trackIcons/networking.svg";
+
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   variable: "--font-poppins",
@@ -41,6 +48,44 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 };
 
 function Tracks() {
+  const tracks = [
+    {
+      title: "FinTech",
+      description:
+        "Innovate in financial services with secure, scalable, and user-friendly solutions.",
+      icon: FintechIcon,
+    },
+    {
+      title: "Healthcare",
+      description:
+        "Develop solutions to enhance patient care, diagnostics, and medical accessibility.",
+      icon: HealthcareIcon,
+    },
+    {
+      title: "EdTech",
+      description:
+        "Transform learning experiences through technology-driven educational advancements.",
+      icon: EdtechIcon,
+    },
+    {
+      title: "Blockchain",
+      description:
+        "Leverage decentralized technologies for transparency, security, and trust.",
+      icon: BlockchainIcon,
+    },
+    {
+      title: "Environmental Impact",
+      description:
+        "Build tech-driven solutions to tackle sustainability and climate challenges.",
+      icon: Environmental,
+    },
+    {
+      title: "Networking and Communication",
+      description:
+        "Enhance global connectivity through efficient and seamless communication systems.",
+      icon: NetworkingIcon,
+    },
+  ];
   return (
     <section
       id={"tracks"}
@@ -60,78 +105,21 @@ function Tracks() {
 
       {/* Responsive Grid */}
       <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_1.svg"
-              alt="Track 1"
-            />
-          }
-          title="Sustainable Living"
-          description="Focuses on reducing environmental impact. It includes carbon footprint tracking, waste management, and eco-friendly shopping, with an aim to conserve resources like water."
-        />
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_2.svg"
-              alt="Track 2"
-            />
-          }
-          title="Healthcare Technology"
-          description="Advances in remote patient monitoring and emphasizes mental health support."
-        />
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_3.svg"
-              alt="Track 3"
-            />
-          }
-          title="Social Connectivity and Inclusion"
-          description="Promotes digital accessibility, encourages language learning and cultural exchange, and bridges generational gaps."
-        />
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_1.svg"
-              alt="Track 1"
-            />
-          }
-          title="Sustainable Living"
-          description="Focuses on reducing environmental impact. It includes carbon footprint tracking, waste management, and eco-friendly shopping, with an aim to conserve resources like water."
-        />
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_2.svg"
-              alt="Track 2"
-            />
-          }
-          title="Healthcare Technology"
-          description="Advances in remote patient monitoring and emphasizes mental health support."
-        />
-        <TrackItem
-          icon={
-            <Image
-              width={100}
-              height={100}
-              src="/track_icon_3.svg"
-              alt="Track 3"
-            />
-          }
-          title="Social Connectivity and Inclusion"
-          description="Promotes digital accessibility, encourages language learning and cultural exchange, and bridges generational gaps."
-        />
+        {tracks.map((track, index) => (
+          <TrackItem
+            key={index}
+            icon={
+              <Image
+                width={100}
+                height={100}
+                src={track.icon}
+                alt={track.title}
+              />
+            }
+            title={track.title}
+            description={track.description}
+          />
+        ))}
       </div>
     </section>
   );

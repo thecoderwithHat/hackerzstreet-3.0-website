@@ -1,17 +1,31 @@
 import React from "react";
 import { Poppins } from "next/font/google";
-import ArrowRight from "@/public/arrow_right.svg";
-import ArrowLeft from "@/public/arrow_left.svg";
-import ArrowTopLeft from "@/public/arrow_top_left.svg";
+import ArrowRight from "@/public/arrows/arrow_right.svg";
+import ArrowLeft from "@/public/arrows/arrow_left.svg";
+import ArrowTopLeft from "@/public/arrows/arrow_top_left.svg";
 import ScheduleBox from "@/app/components/ScheduleBox";
 import Image from "next/image";
 
 const LeftArrow = () => {
-  return <Image src={ArrowLeft} alt={"left_arrow"} className={`w-24`} />;
+  return (
+    <Image
+      src={ArrowLeft}
+      draggable={false}
+      alt={"left_arrow"}
+      className={`w-24`}
+    />
+  );
 };
 
 const RightArrow = () => {
-  return <Image src={ArrowRight} alt={"right_arrow"} className={`w-24`} />;
+  return (
+    <Image
+      src={ArrowRight}
+      draggable={false}
+      alt={"right_arrow"}
+      className={`w-24`}
+    />
+  );
 };
 
 const LeftDownArrow = () => {
@@ -20,6 +34,7 @@ const LeftDownArrow = () => {
       src={ArrowTopLeft}
       alt={"right_arrow"}
       className={`relative mr-10 w-24 -translate-y-2/6 transform`}
+      draggable={false}
     />
   );
 };
@@ -108,7 +123,7 @@ function Schedule() {
 
         <div className={"flex flex-row"}>
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>04</label>
+            <label className={"text-ieeeyellow text-4xl"}>11</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
           <ScheduleBox time={schedule[1].time} text={schedule[1].text} />
@@ -121,7 +136,7 @@ function Schedule() {
         <div className={"flex flex-row-reverse"}>
           <LeftDownArrow />
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>05</label>
+            <label className={"text-ieeeyellow text-4xl"}>12</label>
             <label className={"text-xl text-white"}>April</label>
           </div>
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
@@ -141,7 +156,7 @@ function Schedule() {
 
         <div className={"flex flex-row"}>
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>05</label>
+            <label className={"text-ieeeyellow text-4xl"}>11</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
           <ScheduleBox time={schedule2[0].time} text={schedule2[0].text} />

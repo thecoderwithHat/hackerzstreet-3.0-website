@@ -104,6 +104,7 @@ function HomePage() {
             width={800}
             height={800}
             className={"w-full"}
+            draggable={false}
           />
         </div>
 
@@ -118,6 +119,7 @@ function HomePage() {
             width={800}
             height={800}
             className={"w-full"}
+            draggable={false}
           />
         </div>
       </div>
