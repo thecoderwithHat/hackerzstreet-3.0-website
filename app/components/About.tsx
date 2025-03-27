@@ -3,12 +3,13 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import "@/app/styles/about.css";
-import { Poppins } from 'next/font/google';
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
   variable: "--font-poppins",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const About = () => {
@@ -19,10 +20,17 @@ const About = () => {
     const timeline = gsap.timeline({ repeat: -1 });
 
     timeline.to(logoRef.current, {
-      rotateY: 180,
+      rotateY: 90,
       duration: 1,
       ease: "linear",
       onComplete: () => setIsGolden(true),
+    });
+
+    timeline.to(logoRef.current, {
+      rotateY: 270,
+      duration: 2,
+      ease: "linear",
+      onComplete: () => setIsGolden(false),
     });
 
     timeline.to(logoRef.current, {
@@ -36,24 +44,28 @@ const About = () => {
   return (
     <section
       id="about"
+
       className="bg-transparent my-16 text-white min-h-screen flex flex-col items-center justify-center px-8 py-16 w-full"
-      >
-        <h1 className={`text-8xl font-bold text-center tracking-tighter font-yapari pt-20`}>
-          ABOUT US
-        </h1>
-  
-        <h2 className={`text-ieeeyellow text-2xl font-bold text-center w-full mb-12 ${poppins.className} font-extrabold`}>
-          IEEE COMPUTER SOCIETY MUJ
-        </h2>
-  
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-[80%]">
+
+    >
+      <h1 className={`text-8xl font-bold text-center tracking-tighter font-yapari pt-20`}>
+        ABOUT US
+      </h1>
+
+      <h2 className={`text-ieeeyellow text-2xl font-bold text-center w-full mb-12 ${poppins.className} font-extrabold`}>
+        IEEE COMPUTER SOCIETY MUJ
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-[80%]">
+
+
         <div className="flex items-center justify-center md:justify-start">
           <div
             ref={logoRef}
-            className="rounded-full flex"
+            className="flex rounded-full"
             style={{
               transformStyle: "preserve-3d",
-              backfaceVisibility: "hidden",
+              // backfaceVisibility: "hidden",
             }}
           >
             <Image
@@ -61,7 +73,11 @@ const About = () => {
               alt="IEEE CS Logo"
               width={400}
               height={400}
+
+
               className={"rounded-full object-cover"}
+
+
             />
           </div>
         </div>
@@ -69,18 +85,19 @@ const About = () => {
         <div>
           <div className="flex flex-col items-start">
             <h3
-              className={`text-9xl font-extrabold tracking-tighter mb-2 ${
+              className={`mb-2 text-7xl font-extrabold tracking-tighter md:text-9xl ${
                 isGolden ? "glow-yellow" : "glow-white"
-              } flex items-center justify-start w-full font-yapari`}
+              } font-yapari flex w-full items-center justify-start`}
             >
               CS
             </h3>
-
-            <div className="w-full border-t-2 border-ieeeyellow"></div>
+            <div className="border-ieeeyellow w-full border-t-2"></div>
           </div>
 
-          <p className={`text-white text-sm leading-relaxed mt-4 ${poppins.className}`}>
-          Serving computing at its best with inclusion and diversity is the
+          <p
+            className={`mt-4 text-sm leading-relaxed text-white ${poppins.className}`}
+          >
+            Serving computing at its best with inclusion and diversity is the
             prime motto of the IEEE Computer Society. This society was created
             keeping in mind IEEE’s continued commitment to providing options at
             best. The IEEE Computer Society is driven by the central goals of
