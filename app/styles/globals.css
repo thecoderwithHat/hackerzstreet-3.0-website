@@ -62,7 +62,7 @@ body {
   background-size: 70px 70px; /* Adjust size of grid */
 }
 
-/* ✅ Optional Overlay for Depth */
+
 .bg-pattern::before {
   content: "";
   position: fixed;

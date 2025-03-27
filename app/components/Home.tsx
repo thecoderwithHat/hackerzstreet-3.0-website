@@ -77,20 +77,18 @@ function HomePage() {
   }, []);
 
   return (
-    <main className="relative bg-black text-white px-20 py-20  mx-5 my-10 rounded-4xl overflow-hidden">
+    <main className="relative bg-black text-white  px-20 py-20  mx-5 my-10 rounded-4xl overflow-hidden">
 
 
-<div className="absolute inset-0 overflow-hidden rounded-4xl">
-  <Image
-    draggable="false"
-    src={HeroBackground}
-    alt="Background"
-    className="w-full h-full object-cover"
-  />
-</div>
-
-
-      {/* Top Section */}
+    <div className="absolute inset-0 overflow-hidden rounded-4xl md:block">
+      <Image
+        draggable="false"
+        src={HeroBackground}
+        alt="Background"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    
       <div className={``}>
         <h1 className="text-8xl font-bold font-yapari">HACKERZSTREET</h1>
         <p className={`text-ieeeyellow text-lg text-left font-bold mt-2 font-yapari`}>
