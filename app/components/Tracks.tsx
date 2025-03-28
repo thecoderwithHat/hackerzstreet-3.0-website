@@ -32,13 +32,13 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-3xl border-2 border-dashed border-white/50 transition-all duration-300 ease-in-out ${isActive ? 'bg-[#201a12] backdrop-blur-3xl' : ''}`}
+      className={`group relative overflow-hidden rounded-3xl border-2 border-dashed border-white/50 transition-all duration-300 ease-in-out ${isActive ? "bg-[#201a12] backdrop-blur-3xl" : ""}`}
       onClick={toggleActive} // Handles click for mobile
     >
       {/* SVG Layer */}
       <div className="relative flex h-72 w-full items-center justify-center rounded-3xl hover:bg-[#201a12] hover:backdrop-blur-3xl">
         <div
-          className={`pointer-events-none z-0 transform transition-all duration-300 ease-in-out group-hover:-translate-y-16 group-hover:scale-75 ${isActive ? '-translate-y-16 scale-75' : ''}`}
+          className={`pointer-events-none z-0 transform transition-all duration-300 ease-in-out group-hover:-translate-y-16 group-hover:scale-75 ${isActive ? "-translate-y-16 scale-75" : ""}`}
         >
           {icon}
         </div>
@@ -46,7 +46,7 @@ const TrackItem: React.FC<TrackItemProps> = ({ icon, title, description }) => {
 
       {/* Text Layer */}
       <div
-        className={`absolute bottom-0 left-0 z-10 w-full px-4 py-6 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
+        className={`absolute bottom-0 left-0 z-10 w-full px-4 py-6 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 ${isActive ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}`}
       >
         <p
           className={`text-center text-lg font-medium md:text-lg ${poppins.className} leading-6`}

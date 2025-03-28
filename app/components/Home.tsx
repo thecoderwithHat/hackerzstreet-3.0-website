@@ -6,6 +6,7 @@ import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import RadialPattern from "@/public/backgrounds/radial.svg";
 import RadialPatternMobile from "@/public/backgrounds/radial_mobile.svg";
+import KnowMore from "@/app/components/KnowMore";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500"],
@@ -60,24 +61,7 @@ function HomePage() {
             challenges and opportunities.
           </p>
 
-          <div className="relative mt-2 flex cursor-pointer items-center space-x-2 bg-transparent md:mt-10">
-            <div className="w-40 rounded-full border-[1px] border-white/50 px-3 py-2 text-xs font-bold md:w-72 md:px-10 md:py-3 md:text-base">
-              Want to know more?
-              <br></br>
-              <span className={"text-tiny font-light text-white/50 md:text-sm"}>
-                Scroll to find out!
-              </span>
-            </div>
-            <Image
-              src={"/down.svg"}
-              alt={"down arrow"}
-              width={70}
-              height={70}
-              className={
-                "absolute -right-5 h-12 w-12 md:-right-10 md:h-auto md:w-auto"
-              }
-            />
-          </div>
+          <KnowMore />
           <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10 *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2 *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out *:hover:text-black md:hidden">
             <div className="">
               <FaInstagram className={"h-4 md:h-8 md:w-6"} />

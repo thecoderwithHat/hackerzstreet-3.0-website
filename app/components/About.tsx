@@ -44,7 +44,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-8 py-16 pt-0 text-white md:pt-16"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-2 py-16 pt-0 text-white md:px-8 md:pt-16"
     >
       <h1
         className={`font-yapari pt-20 text-center text-4xl font-bold tracking-tighter md:pt-0 md:text-7xl`}
@@ -60,10 +60,7 @@ const About = () => {
 
       <div className="grid w-full max-w-[80%] grid-cols-1 gap-12 md:grid-cols-2">
         <div className="flex items-center justify-center md:justify-start">
-          <div
-            ref={logoRef}
-            className="flex rounded-full transform-3d"
-          >
+          <div ref={logoRef} className="flex rounded-full transform-3d">
             <Image
               src={isGolden ? "/ieeeLogo.svg" : "/csWhite.svg"}
               alt="IEEE CS Logo"
@@ -87,7 +84,7 @@ const About = () => {
           </div>
 
           <p
-            className={`mt-4 text-sm leading-relaxed text-white ${poppins.className}`}
+            className={`text-tiny mt-4 leading-relaxed text-white md:text-sm ${poppins.className}`}
           >
             Serving computing at its best with inclusion and diversity is the
             prime motto of the IEEE Computer Society. This society was created
