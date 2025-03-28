@@ -62,23 +62,26 @@ function HomePage() {
           </p>
 
           <KnowMore />
-          <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10 *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2 *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out *:hover:text-black md:hidden">
-            <a href="https://www.instagram.com/ieee_csmuj/">
+          <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10
+          *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2
+          *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out
+          *:hover:text-black md:hidden">
+            <a href="https://www.instagram.com/ieee_csmuj/" aria-label="Instagram">
               <div className="">
                 <FaInstagram className={"h-4"} />
               </div>
             </a>
-            <a href="https://www.linkedin.com/company/ieee-cs-muj/posts/?feedView=all">
+            <a href="https://www.linkedin.com/company/ieee-cs-muj" aria-label={"LinkedIn"}>
               <div className="">
                 <FaLinkedin className={"h-4"} />
               </div>
             </a>
-            <a href="https://medium.com/@ieeecs">
+            <a href="https://medium.com/@ieeecs" aria-label="Medium">
               <div className="">
                 <FaMedium className={"h-4"} />
               </div>
             </a>
-            <a href="https://x.com/ieee_csmuj">
+            <a href="https://x.com/ieee_csmuj" aria-label="X">
               <div className="">
                 <FaXTwitter className={"h-4"} />
               </div>
