@@ -66,11 +66,7 @@ const About = () => {
         <div className="flex items-center justify-center md:justify-start">
           <div
             ref={logoRef}
-            className="flex rounded-full"
-            style={{
-              transformStyle: "preserve-3d",
-              // backfaceVisibility: "hidden",
-            }}
+            className="flex rounded-full transform-3d"
           >
             <Image
               src={isGolden ? "/ieeeLogo.svg" : "/csWhite.svg"}
