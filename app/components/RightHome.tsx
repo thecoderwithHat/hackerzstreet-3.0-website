@@ -25,18 +25,29 @@ function RightSection() {
       </div>
 
       <div className="*:hover:bg-ieeeyellow hidden w-56 grid-cols-2 gap-2 *:flex *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2 *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out *:hover:text-black md:grid">
+      
+      <a href="https://www.instagram.com/ieee_csmuj/">
         <div className="">
-          <FaInstagram className={"h-8 w-6"} />
+            <FaInstagram className={"h-8 w-6"} />
         </div>
+        </a>
+      <a href="https://www.linkedin.com/company/ieee-cs-muj/posts/?feedView=all">
         <div className="">
           <FaLinkedin className={"h-8 w-6"} />
-        </div>
-        <div className="">
+        </div>        
+      </a>
+      <a href="https://medium.com/@ieeecs">
+      <div className="">
           <FaMedium className={"h-8 w-6"} />
         </div>
-        <div className="">
+      
+      </a>  
+      <a href="https://x.com/ieee_csmuj">
+      <div className="">
           <FaXTwitter className={"h-8 w-6"} />
         </div>
+      </a>  
+        
       </div>
     </div>
   );
