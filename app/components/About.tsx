@@ -44,11 +44,15 @@ const About = () => {
   return (
     <section
       id="about"
+
+
       className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-8 py-16 pt-0 text-white md:pt-16"
     >
       <h1
         className={`font-yapari pt-20 text-center text-4xl font-bold tracking-tighter md:pt-0 md:text-7xl`}
       >
+
+
         ABOUT US
       </h1>
 
