@@ -106,52 +106,46 @@ const Navbar = () => {
         </div>
       </div>
 
-
       <div
-        className="block md:hidden cursor-pointer"
+        className="block cursor-pointer md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <Image src="/hamburger.svg" alt="hm" width={20} height={20} />
       </div>
 
-
       <div
-  className={`fixed top-0 right-0 pt-10 px-8 h-full w-5/6  bg-[#0a0a0a] shadow-lg z-50 transform transition-transform duration-300 rounded-l-4xl ${
-    isMenuOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
-
-
+        className={`fixed top-0 right-0 z-50 h-full w-5/6 transform rounded-l-4xl bg-[#0a0a0a] px-8 pt-10 shadow-lg transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div
-          className=" flex justify-start"  
+          className="flex justify-start"
           onClick={() => setIsMenuOpen(false)}
         >
-          <span className="text-white text-5xl font-light cursor-pointer">&times;</span>
+          <span className="cursor-pointer text-5xl font-light text-white">
+            &times;
+          </span>
         </div>
         <div
-  tabIndex={0}
-  className="flex flex-col items-center bg-[#232323] focus:bg-[#FFA300] gap-[0.5px] my-5 px-6 py-2 border-[0.5px] border-[#6A6A6A] rounded-4xl"
->
-
-        <div
-             
-             
-              className={` text-white w-full text-xl text-center font-medium py-2 px-5 rounded-[50px]  
-                `}
-            >
-              REGISTER
-            </div>
+          tabIndex={0}
+          className="my-5 flex flex-col items-center gap-[0.5px] rounded-4xl border-[0.5px] border-[#6A6A6A] bg-[#232323] px-6 py-2 focus:bg-[#FFA300]"
+        >
+          <div
+            className={`w-full rounded-[50px] px-5 py-2 text-center text-xl font-medium text-white`}
+          >
+            REGISTER
+          </div>
         </div>
 
-        <div className="flex flex-col items-center  bg-[#232323]  gap-[0.5px] p-3 py-4 border-[0.5px] border-[#6A6A6A] rounded-4xl">
+        <div className="flex flex-col items-center gap-[0.5px] rounded-4xl border-[0.5px] border-[#6A6A6A] bg-[#232323] p-3 py-4">
           {navLinks.map(({ name, id }) => (
             <div
               key={name}
               onClick={() => handleScroll(id)}
-              className={`cursor-pointer  text-white w-full text-3xl text-center font-medium py-4 px-8 rounded-4xl ${
+              className={`w-full cursor-pointer rounded-4xl px-8 py-4 text-center text-3xl font-medium text-white ${
                 name === "Home"
                   ? "bg-[#404041] font-bold"
-                  : "hover:bg-gray-700 transition-all"
+                  : "transition-all hover:bg-gray-700"
               }`}
             >
               {name}
@@ -160,10 +154,9 @@ const Navbar = () => {
         </div>
       </div>
 
-
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
+          className="fixed inset-0 z-40 bg-black opacity-50"
           onClick={() => setIsMenuOpen(false)}
         ></div>
       )}

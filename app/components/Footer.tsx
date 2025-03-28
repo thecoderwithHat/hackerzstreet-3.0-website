@@ -73,18 +73,26 @@ const Footer = () => {
             <div
               className={`my-4 flex items-center justify-center space-x-2 text-2xl md:space-x-4 md:*:w-auto`}
             >
-              <div className="">
-                <FaInstagram className={"h-4 md:h-8 md:w-6"} />
-              </div>
-              <div className="">
-                <FaLinkedin className={"h-4 md:h-8 md:w-6"} />
-              </div>
-              <div className="">
-                <FaMedium className={"h-4 md:h-8 md:w-6"} />
-              </div>
-              <div className="">
-                <FaXTwitter className={"h-4 md:h-8 md:w-6"} />
-              </div>
+              <a href="https://www.instagram.com/ieee_csmuj/">
+                <div className="">
+                  <FaInstagram className={"h-4"} />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/company/ieee-cs-muj/posts/?feedView=all">
+                <div className="">
+                  <FaLinkedin className={"h-4"} />
+                </div>
+              </a>
+              <a href="https://medium.com/@ieeecs">
+                <div className="">
+                  <FaMedium className={"h-4"} />
+                </div>
+              </a>
+              <a href="https://x.com/ieee_csmuj">
+                <div className="">
+                  <FaXTwitter className={"h-4"} />
+                </div>
+              </a>
             </div>
             <p className="text-tiny text-center md:text-sm">
               Made with <span className="text-yellow-400">&#x1F49B;</span> by
