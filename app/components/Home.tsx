@@ -97,6 +97,7 @@ function HomePage() {
             height={800}
             className={"w-full"}
             draggable={false}
+            priority={true}
           />
         </div>
 
@@ -112,6 +113,7 @@ function HomePage() {
             height={800}
             className={"w-full"}
             draggable={false}
+            priority={true}
           />
         </div>
       </div>
