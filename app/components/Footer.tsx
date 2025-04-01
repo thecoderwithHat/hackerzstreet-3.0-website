@@ -48,11 +48,16 @@ const Footer = () => {
               <p className="text-xs font-bold md:text-2xl">Pranav Bhardwaj</p>
               <p className={"text-tiny md:text-base"}>+91 99995 58266</p>
               <p className={"text-tiny md:text-base"}>Vice-Chairperson</p>
+            </div> <div>
+              {/* Done By Mohit hehe*/}
+              <p className="text-xs font-bold md:text-2xl">Mohit Hingorani</p>
+              <p className={"text-tiny md:text-base"}>+91 9811033533</p>
+              <p className={"text-tiny md:text-base"}>General Secretary</p>
             </div>
           </div>
           <div
             className={
-              "mt-4 block h-[7rem] w-[0.25rem] border-r-[2px] border-white md:hidden"
+              "mt-4 block h-[12rem] w-[0.25rem] border-r-[2px] border-white md:hidden"
             }
           ></div>
           <div
