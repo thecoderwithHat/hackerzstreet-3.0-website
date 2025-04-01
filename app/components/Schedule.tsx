@@ -196,7 +196,7 @@ function Schedule() {
               "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
             }
           >
-            <label className={"text-ieeeyellow"}>11</label>
+            <label className={"text-ieeeyellow"}>12</label>
             <label className={"text-xl text-white"}>April</label>
           </div>
           <ScheduleBox time={schedule[1].time} text={schedule[1].text} />
@@ -210,8 +210,7 @@ function Schedule() {
               "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
             }
           >
-            <label className={"text-ieeeyellow"}>12</label>
-            <label className={"text-xl text-white"}>April</label>
+           
           </div>
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
           <DownArrow />
@@ -234,7 +233,7 @@ function Schedule() {
               "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
             }
           >
-            <label className={"text-ieeeyellow"}>12</label>
+            <label className={"text-ieeeyellow"}>13</label>
             <label className={"text-xl text-white"}>April</label>
           </div>
           <ScheduleBox time={schedule2[0].time} text={schedule2[0].text} />
