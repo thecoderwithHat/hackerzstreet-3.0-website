@@ -135,7 +135,7 @@ function Schedule() {
 
         <div className={"flex flex-row"}>
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>11</label>
+            <label className={"text-ieeeyellow text-4xl"}>12</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
           <ScheduleBox time={schedule[1].time} text={schedule[1].text} />
@@ -147,10 +147,7 @@ function Schedule() {
 
         <div className={"flex flex-row-reverse"}>
           <LeftDownArrow />
-          <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>12</label>
-            <label className={"text-xl text-white"}>April</label>
-          </div>
+          
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
           <LeftArrow />
           <ScheduleBox time={schedule[6].time} text={schedule[6].text} />
@@ -168,7 +165,7 @@ function Schedule() {
 
         <div className={"flex flex-row"}>
           <div className={"*:font-yapari flex flex-col *:font-bold"}>
-            <label className={"text-ieeeyellow text-4xl"}>12</label>
+            <label className={"text-ieeeyellow text-4xl"}>13</label>
             <label className={"text-xl text-white"}>April:</label>
           </div>
           <ScheduleBox time={schedule2[0].time} text={schedule2[0].text} />
