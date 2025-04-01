@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "hackathon, IEEEMUJ, IEEECS, hackerz, hackerzstreet, coding, programming, tech",
   openGraph: {
     title: "HackerzStreet 3.0",
-    description: "Largest hackathon of IEEE MUJ with a prize pool of 60K+",
+    description: "Largest hackathon of IEEE MUJ with a prize pool of 40K+",
     url: "https://hackerzstreet.ieeemuj.com",
     images:
       "https://images.prismic.io/ieeemuj/Z-XOindAxsiBwAyV_hzsunstopposter.png?auto=format,compress",
