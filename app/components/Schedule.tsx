@@ -60,35 +60,35 @@ const poppins = Poppins({
 
 const schedule = [
   {
-    time: "5:30 PM",
+    time: "10:00 AM",
     text: "Participants report to the venue given and get themselves checked-in.",
   },
   {
-    time: "6:00 PM",
+    time: "11:00 AM",
     text: "Problem statements are released at the website and the hackathon begins.",
   },
   {
-    time: "10:00 PM",
+    time: "12:00 PM",
     text: "Participants are provided with refreshments.",
   },
   {
-    time: "11:00 PM",
+    time: "3:00 PM",
     text: "Mentorship round 1 begins.",
   },
   {
-    time: "2:00 AM",
+    time: "6:00 PM",
     text: "Mentorship round 2 begins.",
   },
   {
-    time: "4:00 AM",
+    time: "8:00 PM",
     text: "Submission link is released to all the teams.",
   },
   {
-    time: "5:00 AM",
+    time: "10:00 PM",
     text: "Round 1 officially ends and the submission link is closed.",
   },
   {
-    time: "8:00 AM",
+    time: "12:00 AM",
     text: "Round 1 results are announced.",
   },
 ];
