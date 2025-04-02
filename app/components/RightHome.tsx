@@ -6,7 +6,7 @@ function RightSection() {
     <div className="font-yapari mt-10 flex flex-col items-end justify-start space-y-4 font-bold text-white md:mt-0">
       <div className="flex w-32 flex-col items-center justify-center rounded-xl border-2 border-dashed border-white/50 p-2 md:w-56 md:p-4">
         <p className="text-ieeeyellow text-3xl tracking-tighter md:text-5xl">
-          40K
+          60K
         </p>
         <p className="text-xs font-extrabold md:text-xl md:tracking-wide">
           PRIZE POOL
