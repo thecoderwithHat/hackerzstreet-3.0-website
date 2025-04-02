@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="w-full">
       <HomePage />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Schedule />
       <Tracks />
       <About />
