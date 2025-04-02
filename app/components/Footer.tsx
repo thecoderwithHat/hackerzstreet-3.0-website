@@ -48,7 +48,6 @@ const Footer = () => {
               <p className="text-xs font-bold md:text-2xl">Pranav Bhardwaj</p>
               <p className={"text-tiny md:text-base"}>+91 99995 58266</p>
               <p className={"text-tiny md:text-base"}>Vice-Chairperson</p>
-            </div> <div>
               {/* Done By Mohit hehe*/}
               <p className="text-xs font-bold md:text-2xl">Mohit Hingorani</p>
               <p className={"text-tiny md:text-base"}>+91 9811033533</p>
@@ -78,12 +77,18 @@ const Footer = () => {
             <div
               className={`my-4 flex items-center justify-center space-x-2 text-2xl md:space-x-4 md:*:w-auto`}
             >
-              <a href="https://www.instagram.com/ieee_csmuj/" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/ieee_csmuj/"
+                aria-label="Instagram"
+              >
                 <div className="">
                   <FaInstagram className={"h-4"} />
                 </div>
               </a>
-              <a href="https://www.linkedin.com/company/ieee-cs-muj" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/ieee-cs-muj"
+                aria-label="LinkedIn"
+              >
                 <div className="">
                   <FaLinkedin className={"h-4"} />
                 </div>

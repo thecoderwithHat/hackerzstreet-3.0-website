@@ -62,16 +62,19 @@ function HomePage() {
           </p>
 
           <KnowMore />
-          <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10
-          *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2
-          *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out
-          *:hover:text-black md:hidden">
-            <a href="https://www.instagram.com/ieee_csmuj/" aria-label="Instagram">
+          <div className="*:hover:bg-ieeeyellow flex w-56 gap-2 *:flex *:h-10 *:w-10 *:cursor-pointer *:flex-row *:items-center *:justify-center *:rounded-xl *:border-2 *:border-dashed *:border-white/50 *:p-2 *:transition-all *:duration-300 *:ease-in-out *:hover:text-black md:hidden">
+            <a
+              href="https://www.instagram.com/ieee_csmuj/"
+              aria-label="Instagram"
+            >
               <div className="">
                 <FaInstagram className={"h-4"} />
               </div>
             </a>
-            <a href="https://www.linkedin.com/company/ieee-cs-muj" aria-label={"LinkedIn"}>
+            <a
+              href="https://www.linkedin.com/company/ieee-cs-muj"
+              aria-label={"LinkedIn"}
+            >
               <div className="">
                 <FaLinkedin className={"h-4"} />
               </div>

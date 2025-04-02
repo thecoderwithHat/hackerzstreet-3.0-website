@@ -30,7 +30,10 @@ function RightSection() {
             <FaInstagram className={"h-8 w-6"} />
           </div>
         </a>
-        <a href="https://www.linkedin.com/company/ieee-cs-muj" aria-label="LinkedIn">
+        <a
+          href="https://www.linkedin.com/company/ieee-cs-muj"
+          aria-label="LinkedIn"
+        >
           <div className="">
             <FaLinkedin className={"h-8 w-6"} />
           </div>

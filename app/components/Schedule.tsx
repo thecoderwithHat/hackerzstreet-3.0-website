@@ -147,7 +147,7 @@ function Schedule() {
 
         <div className={"flex flex-row-reverse"}>
           <LeftDownArrow />
-          
+
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
           <LeftArrow />
           <ScheduleBox time={schedule[6].time} text={schedule[6].text} />
@@ -206,9 +206,7 @@ function Schedule() {
             className={
               "*:font-yapari flex flex-row gap-2 *:text-xl *:font-bold"
             }
-          >
-           
-          </div>
+          ></div>
           <ScheduleBox time={schedule[4].time} text={schedule[4].text} />
           <DownArrow />
           <ScheduleBox time={schedule[6].time} text={schedule[6].text} />
