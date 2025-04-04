@@ -20,7 +20,7 @@ const Navbar = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close menu after clicking
+      setIsMenuOpen(false);
     }
   };
 
@@ -74,7 +74,7 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Desktop Links */}
+      {/* desktop links */}
       <div className="hidden items-center space-x-6 rounded-full border border-white bg-transparent px-2 py-2 lg:flex">
         {navLinks.map(({ name, id }) => (
           <div
@@ -91,21 +91,29 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div
-        ref={registerRef}
-        className="relative hidden cursor-pointer overflow-hidden rounded-full border border-white px-6 py-2 text-white md:block"
+      {/* register button for desktop */}
+      <a
+        href="https://unstop.com/p/hackerzstreet-30-ieee-computer-society-muj-1458331"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <span
-          ref={registerTextRef}
-          className="relative z-10 font-bold tracking-tighter"
+        <div
+          ref={registerRef}
+          className="relative hidden cursor-pointer overflow-hidden rounded-full border border-white px-6 py-2 text-white md:block"
         >
-          REGISTER
-        </span>
-        <div className="hover-text absolute inset-0 z-0 flex items-center justify-center bg-[#FFA300] font-bold tracking-tighter text-white">
-          REGISTER
+          <span
+            ref={registerTextRef}
+            className="relative z-10 font-bold tracking-tighter"
+          >
+            REGISTER
+          </span>
+          <div className="hover-text absolute inset-0 z-0 flex items-center justify-center bg-[#FFA300] font-bold tracking-tighter text-white">
+            REGISTER
+          </div>
         </div>
-      </div>
+      </a>
 
+      {/* hamburger emoji */}
       <div
         className="block cursor-pointer md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -113,6 +121,7 @@ const Navbar = () => {
         <Image src="/hamburger.svg" alt="hm" width={20} height={20} />
       </div>
 
+      {/* mobile menu */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-5/6 transform rounded-l-4xl bg-[#0a0a0a] px-8 pt-10 shadow-lg transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -126,17 +135,24 @@ const Navbar = () => {
             &times;
           </span>
         </div>
-        <div
-          tabIndex={0}
-          className="my-5 flex flex-col items-center gap-[0.5px] rounded-4xl border-[0.5px] border-[#6A6A6A] bg-[#232323] px-6 py-2 focus:bg-[#FFA300]"
+
+        {/* mobile REGISTER Button */}
+        <a
+          href="https://unstop.com/p/hackerzstreet-30-ieee-computer-society-muj-1458331"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div
-            className={`w-full rounded-[50px] px-5 py-2 text-center text-xl font-medium text-white`}
+            tabIndex={0}
+            className="my-5 flex flex-col items-center gap-[0.5px] rounded-4xl border-[0.5px] border-[#6A6A6A] bg-[#232323] px-6 py-2 focus:bg-[#FFA300]"
           >
-            REGISTER
+            <div className="w-full rounded-[50px] px-5 py-2 text-center text-xl font-medium text-white">
+              REGISTER
+            </div>
           </div>
-        </div>
+        </a>
 
+        {/* mObile Nav Links */}
         <div className="flex flex-col items-center gap-[0.5px] rounded-4xl border-[0.5px] border-[#6A6A6A] bg-[#232323] p-3 py-4">
           {navLinks.map(({ name, id }) => (
             <div
@@ -165,3 +181,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
