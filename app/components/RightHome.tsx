@@ -1,9 +1,59 @@
+"use client";
 import { FaInstagram, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useState } from "react";
 
 function RightSection() {
+  const [countdown, setCountdown] = useState({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [elapsed, setElapsed] = useState(false);
+  const targetDate = new Date("2025-04-12T05:30:00Z");
+  const calculateCountdown = () => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+    if (difference <= 0) {
+      setElapsed(true);
+      setCountdown({ hours: 0, minutes: 0, seconds: 0 });
+      return;
+    }
+    const totalSeconds = Math.floor(difference / 1000);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    setCountdown({ hours, minutes, seconds });
+  };
+
+  setTimeout(calculateCountdown, 1);
+  setInterval(calculateCountdown, 1000);
+
+  const formatCountdown = (value: number) => {
+    return value < 10 ? `0${value}` : value;
+  };
+  const formattedHours = formatCountdown(countdown.hours);
+  const formattedMinutes = formatCountdown(countdown.minutes);
+  const formattedSeconds = formatCountdown(countdown.seconds);
+  const countdownDisplay = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+
   return (
     <div className="font-yapari mt-10 flex flex-col items-end justify-start space-y-4 font-bold text-white md:mt-0">
+      <div className="flex w-32 cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-white/50 p-2 text-center md:w-56 md:p-4">
+        <p className="text-ieeeyellow text-xs tracking-tighter md:text-2xl">
+          Problem Statements
+        </p>
+        {elapsed ? (
+          <p className="text-tiny font-extrabold md:text-base md:tracking-wide">
+            Click Here!
+          </p>
+        ) : (
+          <p className="text-tiny font-extrabold md:text-base md:tracking-wide">
+            Goes live in {countdownDisplay}
+          </p>
+        )}
+      </div>
       <div className="flex w-32 flex-col items-center justify-center rounded-xl border-2 border-dashed border-white/50 p-2 md:w-56 md:p-4">
         <p className="text-ieeeyellow text-3xl tracking-tighter md:text-5xl">
           60K
