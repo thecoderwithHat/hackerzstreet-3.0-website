@@ -48,7 +48,8 @@ const Footer = () => {
               <p className="text-xs font-bold md:text-2xl">Pranav Bhardwaj</p>
               <p className={"text-tiny md:text-base"}>+91 99995 58266</p>
               <p className={"text-tiny md:text-base"}>Vice-Chairperson</p>
-              {/* Done By Mohit hehe*/}
+            </div>
+            <div>
               <p className="text-xs font-bold md:text-2xl">Mohit Hingorani</p>
               <p className={"text-tiny md:text-base"}>+91 9811033533</p>
               <p className={"text-tiny md:text-base"}>General Secretary</p>
