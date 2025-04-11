@@ -84,11 +84,11 @@ const schedule = [
     text: "Submission link is released to all the teams.",
   },
   {
-    time: "10:00 PM",
+    time: "11:00 PM",
     text: "Round 1 officially ends and the submission link is closed.",
   },
   {
-    time: "12:00 AM",
+    time: "06:00 AM",
     text: "Round 1 results are announced.",
   },
 ];
