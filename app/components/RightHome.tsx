@@ -45,9 +45,13 @@ function RightSection() {
           Problem Statements
         </p>
         {elapsed ? (
-          <p className="text-tiny font-extrabold md:text-base md:tracking-wide">
+          <a
+            className="text-tiny font-extrabold md:text-base md:tracking-wide no-underline"
+            href={"https://drive.google.com/file/d/1cQLNcxlTQYywZkbdwjANlrDgIl9Yjepl/view?usp=sharing"}
+            target="_blank"
+          >
             Click Here!
-          </p>
+          </a>
         ) : (
           <p className="text-tiny font-extrabold md:text-base md:tracking-wide">
             Goes live in {countdownDisplay}

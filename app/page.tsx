@@ -1,7 +1,7 @@
 import About from "@/app/components/About";
 import React from "react";
 import HomePage from "@/app/components/Home";
-import Tracks from "./components/Tracks";
+import Tracks from "@/app/components/Tracks";
 import Sponsors from "@/app/components/Sponsors";
 import Schedule from "@/app/components/Schedule";
 
